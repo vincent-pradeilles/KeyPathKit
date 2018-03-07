@@ -2,7 +2,7 @@
 
 ## Context
 
-Swift 4 has introduced a new type called `KeyPath`, with allows access the properties of an object with a very nice syntax. For instance:
+Swift 4 has introduced a new type called `KeyPath`, with allows to access the properties of an object with a very nice syntax. For instance:
 
 ```swift
 let string = "Foo"
@@ -11,11 +11,11 @@ let keyPathForCount = \String.count
 let count = string[keyPath: keyPathForCount] // count == 3
 ```
 
-The great part is that the syntax can be very concise, because it supports type inference and chaining properties.
+The great part is that the syntax can be very concise, because it supports type inference and property chaining.
 
 ## Purpose of `KeyPathKit`
 
-Consequently, I thought it would be nice to leverage this new concept to build an API that allows to perform data manipulation in a very declarative fashion.
+Consequently, I thought it would be nice to leverage this new concept in order to build an API that allows to perform data manipulation in a very declarative fashion.
 
 SQL is a great language for such manipulations, so I took inspiration from it and implemented most of its standard operators in Swift 4 using `KeyPath`.
 
@@ -45,7 +45,7 @@ let contacts = [
  
 ### and
 
-Performs a boolean AND operation on an attribute of type `Bool`.
+Performs a boolean AND operation on a property of type `Bool`.
 
 ```swift
 contacts.and(\.hasDriverLicense)
@@ -59,7 +59,7 @@ true
 
 ### average
 
-Calculates the average of a numerical attribute.
+Calculates the average of a numerical property.
 
 ```swift
 contacts.average(\.age).rounded()
@@ -71,7 +71,7 @@ contacts.average(\.age).rounded()
 
 ### between
 
-Filters out elements whose value for the attribute is not within the range.
+Filters out elements whose value for the property is not within the range.
 
 ```swift
 contacts.between(\.age, range: 20...30)
@@ -86,7 +86,7 @@ contacts.between(\.age, range: 20...30)
 
 ### distinct
 
-Returns all the distinct values for the attribute.
+Returns all the distinct values for the property.
 
 ```swift
 contacts.distinct(\.lastName)
@@ -98,7 +98,7 @@ contacts.distinct(\.lastName)
 
 ### filter
 
-Filters out element whose value is `false` for a boolean attribute.
+Filters out element whose value is `false` for a boolean property.
 
 ```swift
 contacts.filter(\.hasDriverLicense)
@@ -114,7 +114,7 @@ contacts.filter(\.hasDriverLicense)
 
 ### groupBy
 
-Groups values by equality on the attribute. 
+Groups values by equality on the property. 
 
 ```swift
 contacts.groupBy(\.lastName)
@@ -130,7 +130,7 @@ contacts.groupBy(\.lastName)
 
 ### join
 
-Joins values of two sequences in tuples by the equality on their respective attribute.
+Joins values of two sequences in tuples by the equality on their respective property.
 
 ```swift
 contacts.join(\.firstName, with: contacts, on: \.lastName)
@@ -145,7 +145,7 @@ contacts.join(\.firstName, with: contacts, on: \.lastName)
 
 ### map
 
-Maps elements to their values of the attribute.
+Maps elements to their values of the property.
 
 ```swift
 contacts.map(\.lastName)
@@ -157,7 +157,7 @@ contacts.map(\.lastName)
 
 ### max
 
-Returns the element with the greatest value for a `Comparable` attribute.
+Returns the element with the greatest value for a `Comparable` property.
 
 ```swift
 contacts.max(\.age)
@@ -171,7 +171,7 @@ Optional(Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicens
 
 ### min
 
-Returns the element with the minimum value for a `Comparable` attribute.
+Returns the element with the minimum value for a `Comparable` property.
 
 ```swift
 contacts.max(\.age)
@@ -185,7 +185,7 @@ Optional(Person(firstName: "Alex", lastName: "Alexson", age: 8, hasDriverLicense
 
 ### or
 
-Performs a boolean OR operation on an attribute of type `Bool`.
+Performs a boolean OR operation on an property of type `Bool`.
 
 ```swift
 contacts.or(\.hasDriverLicense)
@@ -197,7 +197,7 @@ true
 
 ### sum
 
-Calculates the sum of the values for a numerical attribute.
+Calculates the sum of the values for a numerical property.
 
 ```swift
 contacts.sum(\.age)
@@ -209,7 +209,7 @@ contacts.sum(\.age)
 
 ### sort
 
-Sorts the elements with respect to a `Comparable` attribute.
+Sorts the elements with respect to a `Comparable` property.
 
 ```swift
 contacts.sorted(by: \.age)
