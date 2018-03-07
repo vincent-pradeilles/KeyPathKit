@@ -1,0 +1,15 @@
+//
+//  sum.swift
+//  KeyPathKit
+//
+//  Created by Vincent on 07/03/2018.
+//  Copyright © 2018 Vincent. All rights reserved.
+//
+
+import Foundation
+
+extension Sequence {
+    func sum<T: Numeric>(_ attribute: KeyPath<Element, T>) -> T {
+        return reduce(0) { $0 + $1[keyPath: attribute] }
+    }
+}
