@@ -55,4 +55,30 @@ class SortedTests: XCTestCase {
         XCTAssertEqual(data.sorted(by: \.firstName), expectedFirstName)
         XCTAssertEqual(data.sorted(by: \.lastName), expectedLastName)
     }
+    
+    func test_sorted_multiple() {
+        let data = [TestData(firstName: "Charlie", lastName: "Webb"),
+                    TestData(firstName: "Alex", lastName: "Elexson"),
+                    TestData(firstName: "Charles", lastName: "Webb"),
+                    TestData(firstName: "Alex", lastName: "Zunino"),
+                    TestData(firstName: "Alex", lastName: "Alexson"),
+                    TestData(firstName: "John", lastName: "Webb")]
+        
+        let expectedFirstNameAscendingThenLastNameAscending = [TestData(firstName: "Alex", lastName: "Alexson"),
+                                                               TestData(firstName: "Alex", lastName: "Elexson"),
+                                                               TestData(firstName: "Alex", lastName: "Zunino"),
+                                                               TestData(firstName: "Charles", lastName: "Webb"),
+                                                               TestData(firstName: "Charlie", lastName: "Webb"),
+                                                               TestData(firstName: "John", lastName: "Webb")]
+        
+        let expectedLastNameAscendingThenFirstNameDescending = [TestData(firstName: "Alex", lastName: "Alexson"),
+                                                                TestData(firstName: "Alex", lastName: "Elexson"),
+                                                                TestData(firstName: "John", lastName: "Webb"),
+                                                                TestData(firstName: "Charlie", lastName: "Webb"),
+                                                                TestData(firstName: "Charles", lastName: "Webb"),
+                                                                TestData(firstName: "Alex", lastName: "Zunino")]
+        
+        XCTAssertEqual(data.sorted(by: .ascending(\.firstName), .ascending(\.lastName)), expectedFirstNameAscendingThenLastNameAscending)
+        XCTAssertEqual(data.sorted(by: .ascending(\.lastName), .descending(\.firstName)), expectedLastNameAscendingThenFirstNameDescending)
+    }
 }
