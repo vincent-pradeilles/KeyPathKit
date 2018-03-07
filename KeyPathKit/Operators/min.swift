@@ -9,7 +9,7 @@
 import Foundation
 
 extension Collection {
-    func min<T: Comparable>(_ attribute: KeyPath<Element, T>) -> Element? {
+    public func min<T: Comparable>(_ attribute: KeyPath<Element, T>) -> Element? {
         guard let initValue = first else { return nil }
         
         return reduce(initValue) { $0[keyPath: attribute] < $1[keyPath: attribute] ? $0 : $1 }

@@ -9,7 +9,7 @@
 import Foundation
 
 extension Sequence {
-    func distinct<T: Equatable>(_ attribute: KeyPath<Element, T>) -> [T] {
+    public func distinct<T: Equatable>(_ attribute: KeyPath<Element, T>) -> [T] {
         var result: [T] = []
         
         for value in self {

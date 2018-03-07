@@ -9,7 +9,7 @@
 import Foundation
 
 extension Sequence {
-    func and(_ attribute: KeyPath<Element, Bool>) -> Bool {
+    public func and(_ attribute: KeyPath<Element, Bool>) -> Bool {
         return reduce(true) { $0 && $1[keyPath: attribute] }
     }
 }

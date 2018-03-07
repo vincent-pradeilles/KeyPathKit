@@ -9,7 +9,7 @@
 import Foundation
 
 extension Sequence {
-    func or(_ attribute: KeyPath<Element, Bool>) -> Bool {
+    public func or(_ attribute: KeyPath<Element, Bool>) -> Bool {
         return reduce(false) { $0 || $1[keyPath: attribute] }
     }
 }

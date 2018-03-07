@@ -9,7 +9,7 @@
 import Foundation
 
 extension Sequence {
-    func join<T: Equatable, OtherElement>(_ leftAttribute: KeyPath<Element, T>,
+    public func join<T: Equatable, OtherElement>(_ leftAttribute: KeyPath<Element, T>,
                                           with sequence: Array<OtherElement>,
                                           on rightAttribute: KeyPath<OtherElement, T>) -> [(Element, OtherElement)] {
         var result: [(Element, OtherElement)] = []

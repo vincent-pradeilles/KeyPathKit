@@ -9,11 +9,11 @@
 import Foundation
 
 extension Sequence {
-    func between<T> (_ attribute: KeyPath<Element, T>, range: Range<T>) -> [Element] {
+    public func between<T> (_ attribute: KeyPath<Element, T>, range: Range<T>) -> [Element] {
         return filter { range.contains($0[keyPath: attribute]) }
     }
     
-    func between<T> (_ attribute: KeyPath<Element, T>, range: ClosedRange<T>) -> [Element] {
+    public func between<T> (_ attribute: KeyPath<Element, T>, range: ClosedRange<T>) -> [Element] {
         return filter { range.contains($0[keyPath: attribute]) }
     }
 }

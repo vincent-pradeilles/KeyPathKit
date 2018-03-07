@@ -9,7 +9,7 @@
 import Foundation
 
 extension Sequence {
-    func map<T>(_ attribute: KeyPath<Element, T>) -> [T] {
+    public func map<T>(_ attribute: KeyPath<Element, T>) -> [T] {
         return map { $0[keyPath: attribute] }
     }
 }

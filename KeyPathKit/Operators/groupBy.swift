@@ -9,7 +9,7 @@
 import Foundation
 
 extension Sequence {
-    func groupBy<T: Hashable>(_ groupAttribute: KeyPath<Element, T>) -> [T: [Element]] {
+    public func groupBy<T: Hashable>(_ groupAttribute: KeyPath<Element, T>) -> [T: [Element]] {
         var result: [T: [Element]] = [:]
         
         for value in self {
