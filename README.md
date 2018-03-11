@@ -110,6 +110,28 @@ contacts.filter(where: \.hasDriverLicense)
  Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
 ```
 
+### filterLess
+
+Filters out elements whose value is greater than a constant for a `Comparable` property.
+
+```swift
+contacts.filter(where: \.age, lessThan: 30)
+contacts.filter(where: \.age, lessOrEqual: 30)
+```
+
+```
+[Person(firstName: "Charlie", lastName: "Webb", age: 10, hasDriverLicense: false, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Elexson", age: 22, hasDriverLicense: false, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Alexson", age: 8, hasDriverLicense: false, isAmerican: true), 
+ Person(firstName: "John", lastName: "Webb", age: 28, hasDriverLicense: true, isAmerican: true)]
+
+[Person(firstName: "Charlie", lastName: "Webb", age: 10, hasDriverLicense: false, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Elexson", age: 22, hasDriverLicense: false, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Alexson", age: 8, hasDriverLicense: false, isAmerican: true), 
+ Person(firstName: "John", lastName: "Webb", age: 28, hasDriverLicense: true, isAmerican: true), 
+ Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
+```
+
 ### filterLike
 
 Filters out elements whose value for a string property does not match a regular expression.
@@ -121,6 +143,25 @@ contacts.filter(where: \.lastName, like: "^[A-Za-z]*son$")
 ```
 [Person(firstName: "Alex", lastName: "Elexson", age: 22, hasDriverLicense: false, isAmerican: true), 
  Person(firstName: "Alex", lastName: "Alexson", age: 8, hasDriverLicense: false, isAmerican: true), 
+ Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
+```
+
+### filterMore
+
+Filters out elements whose value is lesser than a constant for a `Comparable` property.
+
+```swift
+contacts.filter(where: \.age, moreThan: 30)
+contacts.filter(where: \.age, moreOrEqual: 30)
+```
+
+```
+[Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicense: true, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Zunino", age: 34, hasDriverLicense: true, isAmerican: true)]
+
+
+[Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicense: true, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Zunino", age: 34, hasDriverLicense: true, isAmerican: true), 
  Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
 ```
 
