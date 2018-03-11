@@ -12,5 +12,4 @@ extension Sequence {
     public func flatMap<T>(_ attribute: KeyPath<Element, [T]>) -> [T] {
         return flatMap { $0[keyPath: attribute] }
     }
-
 }
