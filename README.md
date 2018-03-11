@@ -97,7 +97,7 @@ contacts.distinct(\.lastName)
 
 ### filter
 
-Filters out element whose value is `false` for one (or several) boolean property.
+Filters out elements whose value is `false` for one (or several) boolean property.
 
 ```swift
 contacts.filter(where: \.hasDriverLicense)
@@ -107,6 +107,20 @@ contacts.filter(where: \.hasDriverLicense)
 [Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicense: true, isAmerican: true), 
  Person(firstName: "Alex", lastName: "Zunino", age: 34, hasDriverLicense: true, isAmerican: true), 
  Person(firstName: "John", lastName: "Webb", age: 28, hasDriverLicense: true, isAmerican: true), 
+ Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
+```
+
+### filterLike
+
+Filters out elements whose value for a string property does not match a regular expression.
+
+```swift
+contacts.filter(where: \.lastName, like: "^[A-Za-z]*son$")
+```
+
+```
+[Person(firstName: "Alex", lastName: "Elexson", age: 22, hasDriverLicense: false, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Alexson", age: 8, hasDriverLicense: false, isAmerican: true), 
  Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
 ```
 
@@ -123,7 +137,6 @@ contacts.groupBy(\.lastName)
  "Webb": [Person(firstName: "Charlie", lastName: "Webb", age: 10, hasDriverLicense: false, isAmerican: true), Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicense: true, isAmerican: true), Person(firstName: "John", lastName: "Webb", age: 28, hasDriverLicense: true, isAmerican: true)], 
  "Elexson": [Person(firstName: "Alex", lastName: "Elexson", age: 22, hasDriverLicense: false, isAmerican: true), Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)], 
  "Zunino": [Person(firstName: "Alex", lastName: "Zunino", age: 34, hasDriverLicense: true, isAmerican: true)]]
-
 ```
 
 ### join
