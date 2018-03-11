@@ -60,4 +60,16 @@ class JoinTests: XCTestCase {
         
         XCTAssert(data.join(\.string1, with: data, on: \.string2) == expected)
     }
+    
+    func test_join_multiple_critaria() {
+        let data = [TestData(string1: "one", string2: "two"),
+                    TestData(string1: "three", string2: "one"),
+                    TestData(string1: "two", string2: "first"),
+                    TestData(string1: "two", string2: "one"),
+                    TestData(string1: "four", string2: "six")]
+        
+        let expected = [(TestData(string1: "one", string2: "two"), TestData(string1: "two", string2: "one"))]
+        
+        XCTAssert(data.join(with: data, .where(\.string1, equals: \.string2), .where(\.string2, equals: \.string1)) == expected)        
+    }
 }

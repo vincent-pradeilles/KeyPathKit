@@ -97,7 +97,7 @@ contacts.distinct(\.lastName)
 
 ### filter
 
-Filters out element whose value is `false` for a boolean property.
+Filters out element whose value is `false` for one (or several) boolean property.
 
 ```swift
 contacts.filter(where: \.hasDriverLicense)
@@ -138,6 +138,12 @@ contacts.join(\.firstName, with: contacts, on: \.lastName)
 [(Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true), Person(firstName: "Charlie", lastName: "Webb", age: 10, hasDriverLicense: false, isAmerican: true)), 
  (Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true), Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicense: true, isAmerican: true)), 
  (Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true), Person(firstName: "John", lastName: "Webb", age: 28, hasDriverLicense: true, isAmerican: true))]
+```
+
+Joining on more than one attribute is also supported:
+
+```swift
+contacts.join(with: contacts, .where(\.firstName, equals: \.lastName), .where(\.hasDriverLicense, equals: \.isAmerican))
 ```
 
 ### map
