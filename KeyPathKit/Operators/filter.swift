@@ -9,7 +9,7 @@
 import Foundation
 
 extension Sequence {
-    public func filter(_ attribute: KeyPath<Element, Bool>) -> [Element] {
+    public func filter(where attribute: KeyPath<Element, Bool>) -> [Element] {
         return filter { $0[keyPath: attribute] }
     }
 }

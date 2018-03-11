@@ -26,8 +26,8 @@ class MinTests: XCTestCase {
     func test_min_empty() {
         let data: [TestData] = []
         
-        XCTAssertNil(data.min(\.int))
-        XCTAssertNil(data.min(\.double))
+        XCTAssertNil(data.min(of: \.int))
+        XCTAssertNil(data.min(of: \.double))
     }
     
     func test_min_values() {
@@ -38,7 +38,7 @@ class MinTests: XCTestCase {
                                 TestData(int: 2, double: -2.43),
                                 TestData(int: 7, double: 5.0),]
         
-        XCTAssertEqual(data.min(\.int), TestData(int: -3, double: 65.0))
-        XCTAssertEqual(data.min(\.double), TestData(int: 2, double: -2.43))
+        XCTAssertEqual(data.min(of: \.int), TestData(int: -3, double: 65.0))
+        XCTAssertEqual(data.min(of: \.double), TestData(int: 2, double: -2.43))
     }
 }

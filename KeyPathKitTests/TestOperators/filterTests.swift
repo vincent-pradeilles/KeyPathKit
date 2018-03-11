@@ -26,7 +26,7 @@ class FilterTests: XCTestCase {
     func test_filter_empty() {
         let data: [TestData] = []
         
-        XCTAssertTrue(data.filter(\.bool).isEmpty)
+        XCTAssertTrue(data.filter(where: \.bool).isEmpty)
     }
     
     func test_filter_allValues() {
@@ -34,7 +34,7 @@ class FilterTests: XCTestCase {
                                 TestData(string: "second", bool: true),
                                 TestData(string: "third", bool: true)]
         
-        XCTAssertEqual(data.filter(\.bool), data)
+        XCTAssertEqual(data.filter(where: \.bool), data)
     }
     
     func test_filter_someValues() {
@@ -42,7 +42,7 @@ class FilterTests: XCTestCase {
                                 TestData(string: "second", bool: false),
                                 TestData(string: "third", bool: true)]
         
-        XCTAssertEqual(data.filter(\.bool), [TestData(string: "first", bool: true), TestData(string: "third", bool: true)])
+        XCTAssertEqual(data.filter(where: \.bool), [TestData(string: "first", bool: true), TestData(string: "third", bool: true)])
     }
     
     func test_filter_noValue() {
@@ -50,6 +50,6 @@ class FilterTests: XCTestCase {
                                 TestData(string: "second", bool: false),
                                 TestData(string: "third", bool: false)]
         
-        XCTAssertEqual(data.filter(\.bool), [])
+        XCTAssertEqual(data.filter(where: \.bool), [])
     }
 }
