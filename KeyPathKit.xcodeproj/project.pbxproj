@@ -19,6 +19,8 @@
 		BF840D1D2055932E00AC6DA1 /* filterLessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF840D1C2055932E00AC6DA1 /* filterLessTests.swift */; };
 		BF840D1F2055944F00AC6DA1 /* filterMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF840D1E2055944F00AC6DA1 /* filterMore.swift */; };
 		BF840D212055946800AC6DA1 /* filterMoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF840D202055946800AC6DA1 /* filterMoreTests.swift */; };
+		BF840D23205596DF00AC6DA1 /* filterIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF840D22205596DF00AC6DA1 /* filterIn.swift */; };
+		BF840D252055975600AC6DA1 /* filterInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF840D242055975600AC6DA1 /* filterInTests.swift */; };
 		BFF387EB205066AD0059887B /* average.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF387EA205066AD0059887B /* average.swift */; };
 		BFF387EE205066D80059887B /* min.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF387ED205066D80059887B /* min.swift */; };
 		BFF387F0205066E60059887B /* max.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF387EF205066E60059887B /* max.swift */; };
@@ -72,6 +74,8 @@
 		BF840D1C2055932E00AC6DA1 /* filterLessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterLessTests.swift; sourceTree = "<group>"; };
 		BF840D1E2055944F00AC6DA1 /* filterMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterMore.swift; sourceTree = "<group>"; };
 		BF840D202055946800AC6DA1 /* filterMoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterMoreTests.swift; sourceTree = "<group>"; };
+		BF840D22205596DF00AC6DA1 /* filterIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterIn.swift; sourceTree = "<group>"; };
+		BF840D242055975600AC6DA1 /* filterInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterInTests.swift; sourceTree = "<group>"; };
 		BFF387EA205066AD0059887B /* average.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = average.swift; sourceTree = "<group>"; };
 		BFF387ED205066D80059887B /* min.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = min.swift; sourceTree = "<group>"; };
 		BFF387EF205066E60059887B /* max.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = max.swift; sourceTree = "<group>"; };
@@ -164,9 +168,10 @@
 				BFF387F72050672B0059887B /* between.swift */,
 				BFF387FD205067580059887B /* distinct.swift */,
 				BFF387F92050673E0059887B /* filter.swift */,
+				BF840D22205596DF00AC6DA1 /* filterIn.swift */,
 				BF840D1A205592B400AC6DA1 /* filterLess.swift */,
-				BF840D1E2055944F00AC6DA1 /* filterMore.swift */,
 				BF840D162055441200AC6DA1 /* filterLike.swift */,
+				BF840D1E2055944F00AC6DA1 /* filterMore.swift */,
 				BFF388032050678A0059887B /* flatMap.swift */,
 				BFF387FF205067670059887B /* groupBy.swift */,
 				BFF387FB2050674A0059887B /* join.swift */,
@@ -188,9 +193,10 @@
 				BF7E2F012050786100FF096D /* betweenTests.swift */,
 				BFF3881120506D190059887B /* distinctTests.swift */,
 				BFF3880F20506BD90059887B /* filterTests.swift */,
+				BF840D242055975600AC6DA1 /* filterInTests.swift */,
 				BF840D1C2055932E00AC6DA1 /* filterLessTests.swift */,
-				BF840D202055946800AC6DA1 /* filterMoreTests.swift */,
 				BF840D182055450800AC6DA1 /* filterLikeTests.swift */,
+				BF840D202055946800AC6DA1 /* filterMoreTests.swift */,
 				BFF3881F205077A30059887B /* flatMapTests.swift */,
 				BFF3881320506D960059887B /* groupByTests.swift */,
 				BF7E2F032050798E00FF096D /* joinTests.swift */,
@@ -327,6 +333,7 @@
 				BF840D1B205592B400AC6DA1 /* filterLess.swift in Sources */,
 				BFF387EE205066D80059887B /* min.swift in Sources */,
 				BF840D172055441200AC6DA1 /* filterLike.swift in Sources */,
+				BF840D23205596DF00AC6DA1 /* filterIn.swift in Sources */,
 				BFF387FC2050674A0059887B /* join.swift in Sources */,
 				BFF387FA2050673E0059887B /* filter.swift in Sources */,
 				BFF387FE205067580059887B /* distinct.swift in Sources */,
@@ -347,6 +354,7 @@
 				BFF3881E205077080059887B /* mapTests.swift in Sources */,
 				BF7E2F0620507BC500FF096D /* sortedTests.swift in Sources */,
 				BFF3881420506D960059887B /* groupByTests.swift in Sources */,
+				BF840D252055975600AC6DA1 /* filterInTests.swift in Sources */,
 				BFF3881020506BD90059887B /* filterTests.swift in Sources */,
 				BF7E2F022050786100FF096D /* betweenTests.swift in Sources */,
 				BF840D1D2055932E00AC6DA1 /* filterLessTests.swift in Sources */,

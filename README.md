@@ -110,6 +110,21 @@ contacts.filter(where: \.hasDriverLicense)
  Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
 ```
 
+### filterIn
+
+Filters out elements whose value for an `Equatable` property is not in a given `Set`.
+
+```swift
+contacts.filter(where: \.firstName, in: ["Alex", "John"])
+```
+
+```
+[Person(firstName: "Alex", lastName: "Elexson", age: 22, hasDriverLicense: false, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Zunino", age: 34, hasDriverLicense: true, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Alexson", age: 8, hasDriverLicense: false, isAmerican: true), 
+ Person(firstName: "John", lastName: "Webb", age: 28, hasDriverLicense: true, isAmerican: true)]
+```
+
 ### filterLess
 
 Filters out elements whose value is greater than a constant for a `Comparable` property.
