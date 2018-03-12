@@ -37,6 +37,12 @@ extension Sequence {
     
     public func join<OtherElement>(with sequence: Array<OtherElement>,
                                    _ attributes: Join<Element, OtherElement>...) -> [(Element, OtherElement)] {
+        return join(with: sequence, attributes)
+    }
+    
+    // this alternative signature with array instead of vargs is used for calling with predicates
+    internal func join<OtherElement>(with sequence: Array<OtherElement>,
+                                   _ attributes: [Join<Element, OtherElement>]) -> [(Element, OtherElement)] {
         var result: [(Element, OtherElement)] = []
         
         for leftValue in self {

@@ -28,6 +28,9 @@ class FilterMoreTests: XCTestCase {
         
         XCTAssertTrue(data.filter(where: \.int, moreThan: 2).isEmpty)
         XCTAssertTrue(data.filter(where: \.double, moreThan: 2.0).isEmpty)
+        
+        XCTAssertTrue(data.filter(where: \.int > 2).isEmpty)
+        XCTAssertTrue(data.filter(where: \.double > 2.0).isEmpty)
     }
     
     func test_filterMore_allValues() {
@@ -39,6 +42,11 @@ class FilterMoreTests: XCTestCase {
         XCTAssertEqual(data.filter(where: \.int, moreOrEqual: -2), data)
         XCTAssertEqual(data.filter(where: \.double, moreThan: -2301.0), data)
         XCTAssertEqual(data.filter(where: \.double, moreOrEqual: -2300.0), data)
+        
+        XCTAssertEqual(data.filter(where: \.int > -3), data)
+        XCTAssertEqual(data.filter(where: \.int >= -2), data)
+        XCTAssertEqual(data.filter(where: \.double > -2301.0), data)
+        XCTAssertEqual(data.filter(where: \.double >= -2300.0), data)
     }
     
     func test_filterMore_someValues() {
@@ -48,6 +56,9 @@ class FilterMoreTests: XCTestCase {
         
         XCTAssertEqual(data.filter(where: \.int, moreThan: 1), [TestData(int: 3, double: 4.5), TestData(int: 100, double: -2300)])
         XCTAssertEqual(data.filter(where: \.double, moreOrEqual: 4.5), [TestData(int: 3, double: 4.5), TestData(int: -2, double: 5e4)])
+        
+        XCTAssertEqual(data.filter(where: \.int > 1), [TestData(int: 3, double: 4.5), TestData(int: 100, double: -2300)])
+        XCTAssertEqual(data.filter(where: \.double >= 4.5), [TestData(int: 3, double: 4.5), TestData(int: -2, double: 5e4)])
     }
     
     func test_filterMore_noValue() {
@@ -57,5 +68,8 @@ class FilterMoreTests: XCTestCase {
         
         XCTAssertEqual(data.filter(where: \.int, moreThan: 100), [])
         XCTAssertEqual(data.filter(where: \.double, moreOrEqual: (5e4 + 1.0)), [])
+        
+        XCTAssertEqual(data.filter(where: \.int > 100), [])
+        XCTAssertEqual(data.filter(where: \.double >= (5e4 + 1.0)), [])
     }
 }

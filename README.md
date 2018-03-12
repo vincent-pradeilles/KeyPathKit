@@ -19,6 +19,12 @@ Consequently, I thought it would be nice to leverage this new concept in order t
 
 SQL is a great language for such manipulations, so I took inspiration from it and implemented most of its standard operators in Swift 4 using `KeyPath`.
 
+But what really stands `KeyPathKit` appart from the competition is its clever syntax that allows to express queries in a very seamless fashion. For instance :
+
+```swift
+contacts.filter(where: \.lastName == "Webb" && \.age < 40)
+```
+
 ## Operator details
 
 For the purpose of demonstrating the usage of the operators, the following mock data is defined:
@@ -75,6 +81,8 @@ Filters out elements whose value for the property is not within the range.
 
 ```swift
 contacts.between(\.age, range: 20...30)
+// or
+contacts.filter(where: 20...30 ~= \.age)
 ```
 
 ```
@@ -110,6 +118,18 @@ contacts.filter(where: \.hasDriverLicense)
  Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
 ```
 
+Filter also works with predicates:
+
+```swift
+contacts.filter(where: \.firstName == "Webb")
+```
+
+```
+[Person(firstName: "Charlie", lastName: "Webb", age: 10, hasDriverLicense: false, isAmerican: true),
+ Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicense: true, isAmerican: true),
+ Person(firstName: "John", lastName: "Webb", age: 28, hasDriverLicense: true, isAmerican: true)]
+```
+
 ### filterIn
 
 Filters out elements whose value for an `Equatable` property is not in a given `Set`.
@@ -131,7 +151,8 @@ Filters out elements whose value is greater than a constant for a `Comparable` p
 
 ```swift
 contacts.filter(where: \.age, lessThan: 30)
-contacts.filter(where: \.age, lessOrEqual: 30)
+// or
+contacts.filter(where: \.age < 30)
 ```
 
 ```
@@ -139,7 +160,15 @@ contacts.filter(where: \.age, lessOrEqual: 30)
  Person(firstName: "Alex", lastName: "Elexson", age: 22, hasDriverLicense: false, isAmerican: true), 
  Person(firstName: "Alex", lastName: "Alexson", age: 8, hasDriverLicense: false, isAmerican: true), 
  Person(firstName: "John", lastName: "Webb", age: 28, hasDriverLicense: true, isAmerican: true)]
+```
+ 
+```swift
+contacts.filter(where: \.age, lessOrEqual: 30)
+// or
+contacts.filter(where: \.age <= 30)
+```
 
+```
 [Person(firstName: "Charlie", lastName: "Webb", age: 10, hasDriverLicense: false, isAmerican: true), 
  Person(firstName: "Alex", lastName: "Elexson", age: 22, hasDriverLicense: false, isAmerican: true), 
  Person(firstName: "Alex", lastName: "Alexson", age: 8, hasDriverLicense: false, isAmerican: true), 
@@ -167,14 +196,22 @@ Filters out elements whose value is lesser than a constant for a `Comparable` pr
 
 ```swift
 contacts.filter(where: \.age, moreThan: 30)
-contacts.filter(where: \.age, moreOrEqual: 30)
+// or
+contacts.filter(where: \.age > 30)
 ```
 
 ```
 [Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicense: true, isAmerican: true), 
  Person(firstName: "Alex", lastName: "Zunino", age: 34, hasDriverLicense: true, isAmerican: true)]
+```
 
+```swift
+contacts.filter(where: \.age, moreOrEqual: 30)
+// or
+contacts.filter(where: \.age >= 30)
+```
 
+```
 [Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicense: true, isAmerican: true), 
  Person(firstName: "Alex", lastName: "Zunino", age: 34, hasDriverLicense: true, isAmerican: true), 
  Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
@@ -201,6 +238,8 @@ Joins values of two sequences in tuples by the equality on their respective prop
 
 ```swift
 contacts.join(\.firstName, with: contacts, on: \.lastName)
+// or
+contacts.join(with: contacts, where: \.firstName == \.lastName)
 ```
 
 ```
@@ -213,6 +252,8 @@ Joining on more than one attribute is also supported:
 
 ```swift
 contacts.join(with: contacts, .where(\.firstName, equals: \.lastName), .where(\.hasDriverLicense, equals: \.isAmerican))
+// or
+contacts.join(with: contacts, where: \.firstName == \.lastName, \.hasDriverLicense == \.isAmerican)
 ```
 
 ### map

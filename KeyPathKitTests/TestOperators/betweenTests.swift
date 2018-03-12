@@ -19,8 +19,6 @@ extension TestData: Equatable {
         return lhs.int == rhs.int
             && lhs.char == rhs.char
     }
-    
-    
 }
 
 class BetweenTests: XCTestCase {
@@ -31,6 +29,10 @@ class BetweenTests: XCTestCase {
         XCTAssertEqual(data.between(\.int, range: 0...10), [])
         XCTAssertEqual(data.between(\.int, range: 0..<10), [])
         XCTAssertEqual(data.between(\.char, range: "a"..."g"), [])
+        
+        XCTAssertEqual(data.filter(where: 0...100 ~= \.int), [])
+        XCTAssertEqual(data.filter(where: 0..<10 ~= \.int), [])
+        XCTAssertEqual(data.filter(where: "a"..."g" ~= \.char), [])
     }
     
     func test_between_values() {
@@ -44,5 +46,9 @@ class BetweenTests: XCTestCase {
         XCTAssertEqual(data.between(\.int, range: 0...10), [TestData(int: 4, char: "a"), TestData(int: 10, char: "e"),TestData(int: 6, char: "a")])
         XCTAssertEqual(data.between(\.int, range: 0..<10), [TestData(int: 4, char: "a"),TestData(int: 6, char: "a")])
         XCTAssertEqual(data.between(\.char, range: "a"..."g"), [TestData(int: 4, char: "a"), TestData(int: 10, char: "e"), TestData(int: 6, char: "a")])
+        
+        XCTAssertEqual(data.filter(where: 0...10 ~= \.int), [TestData(int: 4, char: "a"), TestData(int: 10, char: "e"),TestData(int: 6, char: "a")])
+        XCTAssertEqual(data.filter(where: 0..<10 ~= \.int), [TestData(int: 4, char: "a"),TestData(int: 6, char: "a")])
+        XCTAssertEqual(data.filter(where: "a"..."g" ~= \.char), [TestData(int: 4, char: "a"), TestData(int: 10, char: "e"), TestData(int: 6, char: "a")])
     }
 }

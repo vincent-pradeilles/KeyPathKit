@@ -38,6 +38,8 @@ class FilterTests: XCTestCase {
         
         XCTAssertEqual(data.filter(where: \.bool1), data)
         XCTAssertEqual(data.filter(where: \.bool1, \.bool2), data)
+        
+        XCTAssertEqual(data.filter(where: \.bool1 == \.bool2), data)
     }
     
     func test_filter_someValues() {
@@ -47,6 +49,9 @@ class FilterTests: XCTestCase {
         
         XCTAssertEqual(data.filter(where: \.bool1), [TestData(string: "first", bool1: true, bool2: false), TestData(string: "third", bool1: true, bool2: true)])
         XCTAssertEqual(data.filter(where: \.bool1, \.bool2), [TestData(string: "third", bool1: true, bool2: true)])
+        
+        XCTAssertEqual(data.filter(where: \.bool1 == \.bool2), [TestData(string: "third", bool1: true, bool2: true)])
+        XCTAssertEqual(data.filter(where: \.bool1 != \.bool2), [TestData(string: "first", bool1: true, bool2: false), TestData(string: "second", bool1: false, bool2: true)])
     }
     
     func test_filter_noValue() {
@@ -56,5 +61,7 @@ class FilterTests: XCTestCase {
         
         XCTAssertEqual(data.filter(where: \.bool1), [])
         XCTAssertEqual(data.filter(where: \.bool1, \.bool2), [])
+        
+        XCTAssertEqual(data.filter(where: \.bool1 == \.bool2), [])
     }
 }

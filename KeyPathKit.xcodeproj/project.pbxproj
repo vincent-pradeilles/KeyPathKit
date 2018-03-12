@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF13D587205725D7004F12FE /* DoubleTypePredicate+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13D586205725D7004F12FE /* DoubleTypePredicate+Operators.swift */; };
+		BF13D58A2057260B004F12FE /* joinPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13D5892057260B004F12FE /* joinPredicate.swift */; };
+		BF2C3A2A205716EB004B9ED6 /* KeyPathSingleTypePredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C3A29205716EB004B9ED6 /* KeyPathSingleTypePredicate.swift */; };
+		BF2C3A2E20571D88004B9ED6 /* filterPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C3A2D20571D88004B9ED6 /* filterPredicate.swift */; };
+		BF2C3A322057223C004B9ED6 /* KeyPathSingleTypePredicate+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C3A312057223C004B9ED6 /* KeyPathSingleTypePredicate+Operators.swift */; };
+		BF2C3A3520572565004B9ED6 /* DoubleTypePredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C3A3420572565004B9ED6 /* DoubleTypePredicate.swift */; };
 		BF59B3A0205065F900D620E1 /* KeyPathKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF59B396205065F800D620E1 /* KeyPathKit.framework */; };
 		BF59B3A5205065F900D620E1 /* KeyPathKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59B3A4205065F900D620E1 /* KeyPathKitTests.swift */; };
 		BF59B3A7205065F900D620E1 /* KeyPathKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BF59B399205065F800D620E1 /* KeyPathKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,6 +65,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF13D586205725D7004F12FE /* DoubleTypePredicate+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoubleTypePredicate+Operators.swift"; sourceTree = "<group>"; };
+		BF13D5892057260B004F12FE /* joinPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinPredicate.swift; sourceTree = "<group>"; };
+		BF2C3A29205716EB004B9ED6 /* KeyPathSingleTypePredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathSingleTypePredicate.swift; sourceTree = "<group>"; };
+		BF2C3A2D20571D88004B9ED6 /* filterPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterPredicate.swift; sourceTree = "<group>"; };
+		BF2C3A312057223C004B9ED6 /* KeyPathSingleTypePredicate+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyPathSingleTypePredicate+Operators.swift"; sourceTree = "<group>"; };
+		BF2C3A3420572565004B9ED6 /* DoubleTypePredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTypePredicate.swift; sourceTree = "<group>"; };
 		BF59B396205065F800D620E1 /* KeyPathKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyPathKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF59B399205065F800D620E1 /* KeyPathKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyPathKit.h; sourceTree = "<group>"; };
 		BF59B39A205065F800D620E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +134,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF2C3A28205716DE004B9ED6 /* SingleTypePredicate */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C3A29205716EB004B9ED6 /* KeyPathSingleTypePredicate.swift */,
+				BF2C3A312057223C004B9ED6 /* KeyPathSingleTypePredicate+Operators.swift */,
+				BF2C3A2D20571D88004B9ED6 /* filterPredicate.swift */,
+			);
+			path = SingleTypePredicate;
+			sourceTree = "<group>";
+		};
+		BF2C3A3320572550004B9ED6 /* DoubleTypePredicate */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C3A3420572565004B9ED6 /* DoubleTypePredicate.swift */,
+				BF13D586205725D7004F12FE /* DoubleTypePredicate+Operators.swift */,
+				BF13D5892057260B004F12FE /* joinPredicate.swift */,
+			);
+			path = DoubleTypePredicate;
+			sourceTree = "<group>";
+		};
 		BF59B38C205065F800D620E1 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +177,8 @@
 			children = (
 				BF59B399205065F800D620E1 /* KeyPathKit.h */,
 				BF59B39A205065F800D620E1 /* Info.plist */,
+				BF2C3A28205716DE004B9ED6 /* SingleTypePredicate */,
+				BF2C3A3320572550004B9ED6 /* DoubleTypePredicate */,
 				BFF387EC205066C90059887B /* Operators */,
 			);
 			path = KeyPathKit;
@@ -323,18 +357,24 @@
 			files = (
 				BFF388062050679A0059887B /* map.swift in Sources */,
 				BFF38800205067670059887B /* groupBy.swift in Sources */,
+				BF2C3A2A205716EB004B9ED6 /* KeyPathSingleTypePredicate.swift in Sources */,
 				BFF388042050678A0059887B /* flatMap.swift in Sources */,
 				BFF387F82050672B0059887B /* between.swift in Sources */,
 				BFF387F0205066E60059887B /* max.swift in Sources */,
+				BF13D587205725D7004F12FE /* DoubleTypePredicate+Operators.swift in Sources */,
 				BFF387F2205067010059887B /* sum.swift in Sources */,
 				BFF38802205067760059887B /* sorted.swift in Sources */,
 				BFF387F42050670D0059887B /* or.swift in Sources */,
+				BF2C3A322057223C004B9ED6 /* KeyPathSingleTypePredicate+Operators.swift in Sources */,
 				BF840D1F2055944F00AC6DA1 /* filterMore.swift in Sources */,
 				BF840D1B205592B400AC6DA1 /* filterLess.swift in Sources */,
 				BFF387EE205066D80059887B /* min.swift in Sources */,
 				BF840D172055441200AC6DA1 /* filterLike.swift in Sources */,
+				BF13D58A2057260B004F12FE /* joinPredicate.swift in Sources */,
+				BF2C3A3520572565004B9ED6 /* DoubleTypePredicate.swift in Sources */,
 				BF840D23205596DF00AC6DA1 /* filterIn.swift in Sources */,
 				BFF387FC2050674A0059887B /* join.swift in Sources */,
+				BF2C3A2E20571D88004B9ED6 /* filterPredicate.swift in Sources */,
 				BFF387FA2050673E0059887B /* filter.swift in Sources */,
 				BFF387FE205067580059887B /* distinct.swift in Sources */,
 				BFF387EB205066AD0059887B /* average.swift in Sources */,
