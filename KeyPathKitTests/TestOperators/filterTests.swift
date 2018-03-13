@@ -39,6 +39,7 @@ class FilterTests: XCTestCase {
         XCTAssertEqual(data.filter(where: \.bool1), data)
         XCTAssertEqual(data.filter(where: \.bool1, \.bool2), data)
         
+        XCTAssertEqual(data.filter(where: \.bool1 == true), data)
         XCTAssertEqual(data.filter(where: \.bool1 == \.bool2), data)
     }
     
@@ -62,6 +63,7 @@ class FilterTests: XCTestCase {
         XCTAssertEqual(data.filter(where: \.bool1), [])
         XCTAssertEqual(data.filter(where: \.bool1, \.bool2), [])
         
+        XCTAssertEqual(data.filter(where: !\.bool2), [])
         XCTAssertEqual(data.filter(where: \.bool1 == \.bool2), [])
     }
 }

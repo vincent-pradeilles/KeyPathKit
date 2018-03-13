@@ -8,12 +8,20 @@
 
 import Foundation
 
-public func &&<Element> (_ leftPredicate: KeyPathSingleTypePredicate<Element>, _ rightPredicate: KeyPathSingleTypePredicate<Element>) -> KeyPathSingleTypePredicate<Element> {
+public func && <Element>(_ leftPredicate: KeyPathSingleTypePredicate<Element>, _ rightPredicate: KeyPathSingleTypePredicate<Element>) -> KeyPathSingleTypePredicate<Element> {
     return KeyPathSingleTypePredicate(evaluator: { lhs, rhs in leftPredicate.evaluate(for: lhs, and: rhs) && rightPredicate.evaluate(for: lhs, and: rhs) })
 }
 
-public func ||<Element> (_ leftPredicate: KeyPathSingleTypePredicate<Element>, _ rightPredicate: KeyPathSingleTypePredicate<Element>) -> KeyPathSingleTypePredicate<Element> {
+public func || <Element>(_ leftPredicate: KeyPathSingleTypePredicate<Element>, _ rightPredicate: KeyPathSingleTypePredicate<Element>) -> KeyPathSingleTypePredicate<Element> {
     return KeyPathSingleTypePredicate(evaluator: { lhs, rhs in leftPredicate.evaluate(for: lhs, and: rhs) || rightPredicate.evaluate(for: lhs, and: rhs) })
+}
+
+public prefix func ! <Element>(_ predicate: KeyPathSingleTypePredicate<Element>) -> KeyPathSingleTypePredicate<Element> {
+    return KeyPathSingleTypePredicate(evaluator: { lhs, _ in !predicate.evaluate(for: lhs) })
+}
+
+public prefix func ! <Element>(_ attribute: KeyPath<Element, Bool>) -> KeyPathSingleTypePredicate<Element> {
+    return KeyPathSingleTypePredicate(evaluator: { lhs, _ in !lhs[keyPath: attribute] })
 }
 
 public func == <Element, T: Equatable>(_ leftAttribute: KeyPath<Element, T>, _ rightAttribute: KeyPath<Element, T>) -> KeyPathSingleTypePredicate<Element> {
