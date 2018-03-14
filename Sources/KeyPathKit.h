@@ -6,12 +6,7 @@
 //  Copyright © 2018 Vincent. All rights reserved.
 //
 
-#define TARGET_OS_OSX (!(TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH))
-#if TARGET_OS_OSX
-#import <AppKit/AppKit.h>
-#else
-#import <UIKit/UIKit.h>
-#endif
+#import <Foundation/Foundation.h>
 
 //! Project version number for KeyPathKit.
 FOUNDATION_EXPORT double KeyPathKitVersionNumber;
