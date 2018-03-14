@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "63786BBF20595FDE00CD3CC5"
-               BuildableName = "KeyPathKit_watchOS.framework"
+               BuildableName = "KeyPathKit.framework"
                BlueprintName = "KeyPathKit-watchOS"
                ReferencedContainer = "container:KeyPathKit.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "63786BBF20595FDE00CD3CC5"
-            BuildableName = "KeyPathKit_watchOS.framework"
+            BuildableName = "KeyPathKit.framework"
             BlueprintName = "KeyPathKit-watchOS"
             ReferencedContainer = "container:KeyPathKit.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "63786BBF20595FDE00CD3CC5"
-            BuildableName = "KeyPathKit_watchOS.framework"
+            BuildableName = "KeyPathKit.framework"
             BlueprintName = "KeyPathKit-watchOS"
             ReferencedContainer = "container:KeyPathKit.xcodeproj">
          </BuildableReference>

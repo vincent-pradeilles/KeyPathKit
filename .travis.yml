@@ -1,0 +1,15 @@
+osx_image: xcode9.2
+language: objective-c
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+  - gem install cocoapods
+script:
+- set -o pipefail && xcodebuild -project KeyPathKit.xcodeproj -scheme KeyPathKit-iOS -destination 'platform=iOS Simulator,name=iPhone X' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean test build | xcpretty
+- set -o pipefail && xcodebuild -project KeyPathKit.xcodeproj -scheme KeyPathKit-tvOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty
+- set -o pipefail && xcodebuild -project KeyPathKit.xcodeproj -scheme KeyPathKit-watchOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty
+- set -o pipefail && xcodebuild -project KeyPathKit.xcodeproj -scheme KeyPathKit-macOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty
+- swift build
+- carthage build --no-skip-current
+- pod repo update
+- pod lib lint --verbose

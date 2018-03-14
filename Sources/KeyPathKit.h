@@ -6,7 +6,8 @@
 //  Copyright © 2018 Vincent. All rights reserved.
 //
 
-#if TARGET_OS_MAC
+#define TARGET_OS_OSX (!(TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH))
+#if TARGET_OS_OSX
 #import <AppKit/AppKit.h>
 #else
 #import <UIKit/UIKit.h>
