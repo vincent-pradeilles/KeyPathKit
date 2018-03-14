@@ -6,7 +6,11 @@
 //  Copyright © 2018 Vincent. All rights reserved.
 //
 
+#if TARGET_OS_MAC
+#import <AppKit/AppKit.h>
+#else
 #import <UIKit/UIKit.h>
+#endif
 
 //! Project version number for KeyPathKit.
 FOUNDATION_EXPORT double KeyPathKitVersionNumber;

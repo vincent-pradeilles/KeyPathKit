@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BF59B395205065F800D620E1"
-               BuildableName = "KeyPathKit.framework"
-               BlueprintName = "KeyPathKit"
+               BlueprintIdentifier = "63786BBF20595FDE00CD3CC5"
+               BuildableName = "KeyPathKit_watchOS.framework"
+               BlueprintName = "KeyPathKit-watchOS"
                ReferencedContainer = "container:KeyPathKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,26 +29,7 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BF59B39E205065F900D620E1"
-               BuildableName = "KeyPathKitTests.xctest"
-               BlueprintName = "KeyPathKitTests"
-               ReferencedContainer = "container:KeyPathKit.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BF59B395205065F800D620E1"
-            BuildableName = "KeyPathKit.framework"
-            BlueprintName = "KeyPathKit"
-            ReferencedContainer = "container:KeyPathKit.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -66,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BF59B395205065F800D620E1"
-            BuildableName = "KeyPathKit.framework"
-            BlueprintName = "KeyPathKit"
+            BlueprintIdentifier = "63786BBF20595FDE00CD3CC5"
+            BuildableName = "KeyPathKit_watchOS.framework"
+            BlueprintName = "KeyPathKit-watchOS"
             ReferencedContainer = "container:KeyPathKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BF59B395205065F800D620E1"
-            BuildableName = "KeyPathKit.framework"
-            BlueprintName = "KeyPathKit"
+            BlueprintIdentifier = "63786BBF20595FDE00CD3CC5"
+            BuildableName = "KeyPathKit_watchOS.framework"
+            BlueprintName = "KeyPathKit-watchOS"
             ReferencedContainer = "container:KeyPathKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
