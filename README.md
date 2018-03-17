@@ -1,5 +1,7 @@
 # KeyPathKit
 
+[![Build Status](https://travis-ci.org/vincent-pradeilles/KeyPathKit.svg?branch=master)](https://travis-ci.org/vincent-pradeilles/KeyPathKit)
+
 ## Context
 
 Swift 4 has introduced a new type called `KeyPath`, with allows to access the properties of an object with a very nice syntax. For instance:
