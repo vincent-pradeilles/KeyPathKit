@@ -1,6 +1,10 @@
 # KeyPathKit
 
 [![Build Status](https://travis-ci.org/vincent-pradeilles/KeyPathKit.svg?branch=master)](https://travis-ci.org/vincent-pradeilles/KeyPathKit)
+![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-333333.svg)
+![pod](https://img.shields.io/cocoapods/v/KeyPathKit.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
 ## Context
 
@@ -25,6 +29,40 @@ But what really stands `KeyPathKit` appart from the competition is its clever sy
 
 ```swift
 contacts.filter(where: \.lastName == "Webb" && \.age < 40)
+```
+
+## Installation
+
+### CocoaPods
+
+Add the following to your `Podfile`:
+
+`pod "KeyPathKit"`
+
+### Carthage
+
+Add the following to your `Cartfile`:
+
+`github "vincent-pradeilles/KeyPathKit"`
+
+### Swift Package Manager
+
+Create a file `Package.swift`:
+
+```swift
+// swift-tools-version:4.0
+
+import PackageDescription
+
+let package = Package(
+    name: "YourProject",
+    dependencies: [
+        .package(url: "https://github.com/vincent-pradeilles/KeyPathKit.git", "1.0.0" ..< "2.0.0")
+    ],
+    targets: [
+        .target(name: "YourProject", dependencies: ["KeyPathKit"])
+    ]
+)
 ```
 
 ## Operator details
