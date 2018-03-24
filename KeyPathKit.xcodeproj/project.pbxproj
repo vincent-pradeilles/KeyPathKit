@@ -107,6 +107,15 @@
 		63786BE12059604400CD3CC5 /* DoubleTypePredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63786B4A20595BEA00CD3CC5 /* DoubleTypePredicate.swift */; };
 		63786BE22059604400CD3CC5 /* joinPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63786B4B20595BEA00CD3CC5 /* joinPredicate.swift */; };
 		63786BE32059604400CD3CC5 /* DoubleTypePredicate+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63786B4C20595BEA00CD3CC5 /* DoubleTypePredicate+Operators.swift */; };
+		BF26F85620669398007519D5 /* firstPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F85520669398007519D5 /* firstPredicate.swift */; };
+		BF26F85720669398007519D5 /* firstPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F85520669398007519D5 /* firstPredicate.swift */; };
+		BF26F85820669398007519D5 /* firstPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F85520669398007519D5 /* firstPredicate.swift */; };
+		BF26F85920669398007519D5 /* firstPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F85520669398007519D5 /* firstPredicate.swift */; };
+		BF26F86020669433007519D5 /* first.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F85F20669433007519D5 /* first.swift */; };
+		BF26F86120669433007519D5 /* first.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F85F20669433007519D5 /* first.swift */; };
+		BF26F86220669433007519D5 /* first.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F85F20669433007519D5 /* first.swift */; };
+		BF26F86320669433007519D5 /* first.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F85F20669433007519D5 /* first.swift */; };
+		BF26F8652066947B007519D5 /* firstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F8642066947B007519D5 /* firstTests.swift */; };
 		BF59B3A0205065F900D620E1 /* KeyPathKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF59B396205065F800D620E1 /* KeyPathKit.framework */; };
 		BF59B3A5205065F900D620E1 /* KeyPathKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59B3A4205065F900D620E1 /* KeyPathKitTests.swift */; };
 		BF7E2F022050786100FF096D /* betweenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E2F012050786100FF096D /* betweenTests.swift */; };
@@ -172,6 +181,9 @@
 		63786BA520595E3700CD3CC5 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "Sources/Info-tvOS.plist"; sourceTree = "<group>"; };
 		63786BC020595FDE00CD3CC5 /* KeyPathKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyPathKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63786BC92059602B00CD3CC5 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-watchOS.plist"; path = "Sources/Info-watchOS.plist"; sourceTree = "<group>"; };
+		BF26F85520669398007519D5 /* firstPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstPredicate.swift; sourceTree = "<group>"; };
+		BF26F85F20669433007519D5 /* first.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = first.swift; sourceTree = "<group>"; };
+		BF26F8642066947B007519D5 /* firstTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstTests.swift; sourceTree = "<group>"; };
 		BF59B396205065F800D620E1 /* KeyPathKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyPathKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF59B39F205065F900D620E1 /* KeyPathKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyPathKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF59B3A4205065F900D620E1 /* KeyPathKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathKitTests.swift; sourceTree = "<group>"; };
@@ -257,6 +269,7 @@
 				63786B3620595BEA00CD3CC5 /* and.swift */,
 				63786B3720595BEA00CD3CC5 /* filterIn.swift */,
 				63786B3820595BEA00CD3CC5 /* filterMore.swift */,
+				BF26F85F20669433007519D5 /* first.swift */,
 				63786B3920595BEA00CD3CC5 /* flatMap.swift */,
 				63786B3A20595BEA00CD3CC5 /* distinct.swift */,
 				63786B3B20595BEA00CD3CC5 /* filterLike.swift */,
@@ -276,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				63786B4520595BEA00CD3CC5 /* filterPredicate.swift */,
+				BF26F85520669398007519D5 /* firstPredicate.swift */,
 				63786B4620595BEA00CD3CC5 /* KeyPathSingleTypePredicate+Operators.swift */,
 				63786B4720595BEA00CD3CC5 /* KeyPathSingleTypePredicate.swift */,
 			);
@@ -339,6 +353,7 @@
 				BF840D1C2055932E00AC6DA1 /* filterLessTests.swift */,
 				BF840D182055450800AC6DA1 /* filterLikeTests.swift */,
 				BF840D202055946800AC6DA1 /* filterMoreTests.swift */,
+				BF26F8642066947B007519D5 /* firstTests.swift */,
 				BFF3881F205077A30059887B /* flatMapTests.swift */,
 				BFF3881320506D960059887B /* groupByTests.swift */,
 				BF7E2F032050798E00FF096D /* joinTests.swift */,
@@ -585,7 +600,9 @@
 				63786B8920595DC400CD3CC5 /* filterPredicate.swift in Sources */,
 				63786B8820595DC000CD3CC5 /* or.swift in Sources */,
 				63786B7A20595DC000CD3CC5 /* filterLess.swift in Sources */,
+				BF26F85720669398007519D5 /* firstPredicate.swift in Sources */,
 				63786B8120595DC000CD3CC5 /* sum.swift in Sources */,
+				BF26F86120669433007519D5 /* first.swift in Sources */,
 				63786B7D20595DC000CD3CC5 /* filterMore.swift in Sources */,
 				63786B8B20595DC400CD3CC5 /* KeyPathSingleTypePredicate.swift in Sources */,
 				63786B8020595DC000CD3CC5 /* filterLike.swift in Sources */,
@@ -616,7 +633,9 @@
 				63786B9B20595E2800CD3CC5 /* KeyPathSingleTypePredicate+Operators.swift in Sources */,
 				63786B9C20595E2800CD3CC5 /* KeyPathSingleTypePredicate.swift in Sources */,
 				63786BA120595E2F00CD3CC5 /* joinPredicate.swift in Sources */,
+				BF26F85820669398007519D5 /* firstPredicate.swift in Sources */,
 				63786BA020595E2F00CD3CC5 /* DoubleTypePredicate.swift in Sources */,
+				BF26F86220669433007519D5 /* first.swift in Sources */,
 				63786BB220595E4000CD3CC5 /* filterLike.swift in Sources */,
 				63786BAB20595E4000CD3CC5 /* join.swift in Sources */,
 				63786BAE20595E4000CD3CC5 /* filterIn.swift in Sources */,
@@ -647,7 +666,9 @@
 				63786BDE2059604000CD3CC5 /* filterPredicate.swift in Sources */,
 				63786BDD2059603D00CD3CC5 /* or.swift in Sources */,
 				63786BCF2059603D00CD3CC5 /* filterLess.swift in Sources */,
+				BF26F85920669398007519D5 /* firstPredicate.swift in Sources */,
 				63786BD62059603D00CD3CC5 /* sum.swift in Sources */,
+				BF26F86320669433007519D5 /* first.swift in Sources */,
 				63786BD22059603D00CD3CC5 /* filterMore.swift in Sources */,
 				63786BE02059604000CD3CC5 /* KeyPathSingleTypePredicate.swift in Sources */,
 				63786BD52059603D00CD3CC5 /* filterLike.swift in Sources */,
@@ -678,7 +699,9 @@
 				63786B6020595BEA00CD3CC5 /* filterPredicate.swift in Sources */,
 				63786B5F20595BEA00CD3CC5 /* or.swift in Sources */,
 				63786B5120595BEA00CD3CC5 /* filterLess.swift in Sources */,
+				BF26F85620669398007519D5 /* firstPredicate.swift in Sources */,
 				63786B5820595BEA00CD3CC5 /* sum.swift in Sources */,
+				BF26F86020669433007519D5 /* first.swift in Sources */,
 				63786B5420595BEA00CD3CC5 /* filterMore.swift in Sources */,
 				63786B6220595BEA00CD3CC5 /* KeyPathSingleTypePredicate.swift in Sources */,
 				63786B5720595BEA00CD3CC5 /* filterLike.swift in Sources */,
@@ -711,6 +734,7 @@
 				BFF3881420506D960059887B /* groupByTests.swift in Sources */,
 				BF840D252055975600AC6DA1 /* filterInTests.swift in Sources */,
 				BFF3881020506BD90059887B /* filterTests.swift in Sources */,
+				BF26F8652066947B007519D5 /* firstTests.swift in Sources */,
 				BF7E2F022050786100FF096D /* betweenTests.swift in Sources */,
 				BF840D1D2055932E00AC6DA1 /* filterLessTests.swift in Sources */,
 				BFF38816205070280059887B /* sumTests.swift in Sources */,
