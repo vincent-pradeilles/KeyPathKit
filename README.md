@@ -65,6 +65,27 @@ let package = Package(
 )
 ```
 
+## Operators
+
+* [and](#and)
+* [average](#average)
+* [between](#between)
+* [distinct](#distinct)
+* [filter](#filter)
+* [filterIn](#filterin)
+* [filterLess](#filterless)
+* [filterLike](#filterlike)
+* [filterMore](#filtermore)
+* [first](#first)
+* [groupBy](#groupby)
+* [join](#join)
+* [map](#map)
+* [max](#max)
+* [min](#min)
+* [or](#or)
+* [sum](#sum)
+* [sort](#sort)
+
 ## Operator details
 
 For the purpose of demonstrating the usage of the operators, the following mock data is defined:
@@ -255,6 +276,18 @@ contacts.filter(where: \.age >= 30)
 [Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicense: true, isAmerican: true), 
  Person(firstName: "Alex", lastName: "Zunino", age: 34, hasDriverLicense: true, isAmerican: true), 
  Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
+```
+
+### first
+
+Returns the first element matching a predicate.
+
+```swift
+contacts.first(where: \.lastName == "Webb")
+```
+
+```
+Optional(Person(firstName: "Charlie", lastName: "Webb", age: 10, hasDriverLicense: false, isAmerican: true))
 ```
 
 ### groupBy
