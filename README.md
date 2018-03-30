@@ -70,6 +70,7 @@ let package = Package(
 * [and](#and)
 * [average](#average)
 * [between](#between)
+* [contains](#contains)
 * [distinct](#distinct)
 * [filter](#filter)
 * [filterIn](#filterin)
@@ -150,6 +151,20 @@ contacts.filter(where: 20...30 ~= \.age)
 [Person(firstName: "Alex", lastName: "Elexson", age: 22, hasDriverLicense: false, isAmerican: true),
  Person(firstName: "John", lastName: "Webb", age: 28, hasDriverLicense: true, isAmerican: true), 
  Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
+```
+
+### contains
+
+Returns whether the sequence contains one element for which the specified boolean property or predicate is true.
+
+```swift
+contacts.contains(where: \.hasDriverLicense)
+contacts.contains(where: \.lastName.count > 10)
+```
+
+```
+true
+false
 ```
 
 ### distinct

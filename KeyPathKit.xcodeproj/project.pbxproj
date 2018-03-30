@@ -125,6 +125,15 @@
 		BF840D1D2055932E00AC6DA1 /* filterLessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF840D1C2055932E00AC6DA1 /* filterLessTests.swift */; };
 		BF840D212055946800AC6DA1 /* filterMoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF840D202055946800AC6DA1 /* filterMoreTests.swift */; };
 		BF840D252055975600AC6DA1 /* filterInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF840D242055975600AC6DA1 /* filterInTests.swift */; };
+		BFCE528B206E70C7001422BA /* containsPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE528A206E70C7001422BA /* containsPredicate.swift */; };
+		BFCE528C206E70C7001422BA /* containsPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE528A206E70C7001422BA /* containsPredicate.swift */; };
+		BFCE528D206E70C7001422BA /* containsPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE528A206E70C7001422BA /* containsPredicate.swift */; };
+		BFCE528E206E70C7001422BA /* containsPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE528A206E70C7001422BA /* containsPredicate.swift */; };
+		BFCE5290206E7128001422BA /* containsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE528F206E7128001422BA /* containsTests.swift */; };
+		BFCE5292206E718B001422BA /* contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE5291206E718B001422BA /* contains.swift */; };
+		BFCE5293206E718B001422BA /* contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE5291206E718B001422BA /* contains.swift */; };
+		BFCE5294206E718B001422BA /* contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE5291206E718B001422BA /* contains.swift */; };
+		BFCE5295206E718B001422BA /* contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE5291206E718B001422BA /* contains.swift */; };
 		BFF38809205069250059887B /* orTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF38808205069250059887B /* orTests.swift */; };
 		BFF3880E20506B630059887B /* andTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3880D20506B630059887B /* andTests.swift */; };
 		BFF3881020506BD90059887B /* filterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3880F20506BD90059887B /* filterTests.swift */; };
@@ -195,6 +204,9 @@
 		BF840D1C2055932E00AC6DA1 /* filterLessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterLessTests.swift; sourceTree = "<group>"; };
 		BF840D202055946800AC6DA1 /* filterMoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterMoreTests.swift; sourceTree = "<group>"; };
 		BF840D242055975600AC6DA1 /* filterInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterInTests.swift; sourceTree = "<group>"; };
+		BFCE528A206E70C7001422BA /* containsPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = containsPredicate.swift; sourceTree = "<group>"; };
+		BFCE528F206E7128001422BA /* containsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = containsTests.swift; sourceTree = "<group>"; };
+		BFCE5291206E718B001422BA /* contains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contains.swift; sourceTree = "<group>"; };
 		BFF38808205069250059887B /* orTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orTests.swift; sourceTree = "<group>"; };
 		BFF3880D20506B630059887B /* andTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = andTests.swift; sourceTree = "<group>"; };
 		BFF3880F20506BD90059887B /* filterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterTests.swift; sourceTree = "<group>"; };
@@ -262,25 +274,26 @@
 		63786B3120595BEA00CD3CC5 /* Operators */ = {
 			isa = PBXGroup;
 			children = (
-				63786B3220595BEA00CD3CC5 /* max.swift */,
-				63786B3320595BEA00CD3CC5 /* groupBy.swift */,
-				63786B3420595BEA00CD3CC5 /* join.swift */,
-				63786B3520595BEA00CD3CC5 /* filterLess.swift */,
 				63786B3620595BEA00CD3CC5 /* and.swift */,
+				63786B3D20595BEA00CD3CC5 /* average.swift */,
+				63786B4120595BEA00CD3CC5 /* between.swift */,
+				BFCE5291206E718B001422BA /* contains.swift */,
+				63786B3A20595BEA00CD3CC5 /* distinct.swift */,
+				63786B3E20595BEA00CD3CC5 /* filter.swift */,
 				63786B3720595BEA00CD3CC5 /* filterIn.swift */,
+				63786B3520595BEA00CD3CC5 /* filterLess.swift */,
+				63786B3B20595BEA00CD3CC5 /* filterLike.swift */,
 				63786B3820595BEA00CD3CC5 /* filterMore.swift */,
 				BF26F85F20669433007519D5 /* first.swift */,
 				63786B3920595BEA00CD3CC5 /* flatMap.swift */,
-				63786B3A20595BEA00CD3CC5 /* distinct.swift */,
-				63786B3B20595BEA00CD3CC5 /* filterLike.swift */,
-				63786B3C20595BEA00CD3CC5 /* sum.swift */,
-				63786B3D20595BEA00CD3CC5 /* average.swift */,
-				63786B3E20595BEA00CD3CC5 /* filter.swift */,
+				63786B3320595BEA00CD3CC5 /* groupBy.swift */,
+				63786B3420595BEA00CD3CC5 /* join.swift */,
+				63786B3220595BEA00CD3CC5 /* max.swift */,
 				63786B3F20595BEA00CD3CC5 /* min.swift */,
-				63786B4020595BEA00CD3CC5 /* sorted.swift */,
-				63786B4120595BEA00CD3CC5 /* between.swift */,
-				63786B4220595BEA00CD3CC5 /* map.swift */,
 				63786B4320595BEA00CD3CC5 /* or.swift */,
+				63786B4020595BEA00CD3CC5 /* sorted.swift */,
+				63786B3C20595BEA00CD3CC5 /* sum.swift */,
+				63786B4220595BEA00CD3CC5 /* map.swift */,
 			);
 			path = Operators;
 			sourceTree = "<group>";
@@ -288,6 +301,7 @@
 		63786B4420595BEA00CD3CC5 /* SingleTypePredicate */ = {
 			isa = PBXGroup;
 			children = (
+				BFCE528A206E70C7001422BA /* containsPredicate.swift */,
 				63786B4520595BEA00CD3CC5 /* filterPredicate.swift */,
 				BF26F85520669398007519D5 /* firstPredicate.swift */,
 				63786B4620595BEA00CD3CC5 /* KeyPathSingleTypePredicate+Operators.swift */,
@@ -347,6 +361,7 @@
 				BFF3880D20506B630059887B /* andTests.swift */,
 				BFF3881B2050756E0059887B /* averageTests.swift */,
 				BF7E2F012050786100FF096D /* betweenTests.swift */,
+				BFCE528F206E7128001422BA /* containsTests.swift */,
 				BFF3881120506D190059887B /* distinctTests.swift */,
 				BFF3880F20506BD90059887B /* filterTests.swift */,
 				BF840D242055975600AC6DA1 /* filterInTests.swift */,
@@ -604,6 +619,8 @@
 				63786B8120595DC000CD3CC5 /* sum.swift in Sources */,
 				BF26F86120669433007519D5 /* first.swift in Sources */,
 				63786B7D20595DC000CD3CC5 /* filterMore.swift in Sources */,
+				BFCE5293206E718B001422BA /* contains.swift in Sources */,
+				BFCE528C206E70C7001422BA /* containsPredicate.swift in Sources */,
 				63786B8B20595DC400CD3CC5 /* KeyPathSingleTypePredicate.swift in Sources */,
 				63786B8020595DC000CD3CC5 /* filterLike.swift in Sources */,
 				63786B8420595DC000CD3CC5 /* min.swift in Sources */,
@@ -637,6 +654,8 @@
 				63786BA020595E2F00CD3CC5 /* DoubleTypePredicate.swift in Sources */,
 				BF26F86220669433007519D5 /* first.swift in Sources */,
 				63786BB220595E4000CD3CC5 /* filterLike.swift in Sources */,
+				BFCE5294206E718B001422BA /* contains.swift in Sources */,
+				BFCE528D206E70C7001422BA /* containsPredicate.swift in Sources */,
 				63786BAB20595E4000CD3CC5 /* join.swift in Sources */,
 				63786BAE20595E4000CD3CC5 /* filterIn.swift in Sources */,
 				63786BB720595E4000CD3CC5 /* sorted.swift in Sources */,
@@ -670,6 +689,8 @@
 				63786BD62059603D00CD3CC5 /* sum.swift in Sources */,
 				BF26F86320669433007519D5 /* first.swift in Sources */,
 				63786BD22059603D00CD3CC5 /* filterMore.swift in Sources */,
+				BFCE5295206E718B001422BA /* contains.swift in Sources */,
+				BFCE528E206E70C7001422BA /* containsPredicate.swift in Sources */,
 				63786BE02059604000CD3CC5 /* KeyPathSingleTypePredicate.swift in Sources */,
 				63786BD52059603D00CD3CC5 /* filterLike.swift in Sources */,
 				63786BD92059603D00CD3CC5 /* min.swift in Sources */,
@@ -703,6 +724,8 @@
 				63786B5820595BEA00CD3CC5 /* sum.swift in Sources */,
 				BF26F86020669433007519D5 /* first.swift in Sources */,
 				63786B5420595BEA00CD3CC5 /* filterMore.swift in Sources */,
+				BFCE5292206E718B001422BA /* contains.swift in Sources */,
+				BFCE528B206E70C7001422BA /* containsPredicate.swift in Sources */,
 				63786B6220595BEA00CD3CC5 /* KeyPathSingleTypePredicate.swift in Sources */,
 				63786B5720595BEA00CD3CC5 /* filterLike.swift in Sources */,
 				63786B5B20595BEA00CD3CC5 /* min.swift in Sources */,
@@ -733,6 +756,7 @@
 				BF7E2F0620507BC500FF096D /* sortedTests.swift in Sources */,
 				BFF3881420506D960059887B /* groupByTests.swift in Sources */,
 				BF840D252055975600AC6DA1 /* filterInTests.swift in Sources */,
+				BFCE5290206E7128001422BA /* containsTests.swift in Sources */,
 				BFF3881020506BD90059887B /* filterTests.swift in Sources */,
 				BF26F8652066947B007519D5 /* firstTests.swift in Sources */,
 				BF7E2F022050786100FF096D /* betweenTests.swift in Sources */,
