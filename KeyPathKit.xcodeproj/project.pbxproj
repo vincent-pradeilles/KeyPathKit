@@ -134,6 +134,15 @@
 		BFCE5293206E718B001422BA /* contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE5291206E718B001422BA /* contains.swift */; };
 		BFCE5294206E718B001422BA /* contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE5291206E718B001422BA /* contains.swift */; };
 		BFCE5295206E718B001422BA /* contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE5291206E718B001422BA /* contains.swift */; };
+		BFCE5297206E745A001422BA /* drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE5296206E745A001422BA /* drop.swift */; };
+		BFCE5298206E745A001422BA /* drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE5296206E745A001422BA /* drop.swift */; };
+		BFCE5299206E745A001422BA /* drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE5296206E745A001422BA /* drop.swift */; };
+		BFCE529A206E745A001422BA /* drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE5296206E745A001422BA /* drop.swift */; };
+		BFCE529C206E749B001422BA /* dropPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE529B206E749B001422BA /* dropPredicate.swift */; };
+		BFCE529D206E749B001422BA /* dropPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE529B206E749B001422BA /* dropPredicate.swift */; };
+		BFCE529E206E749B001422BA /* dropPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE529B206E749B001422BA /* dropPredicate.swift */; };
+		BFCE529F206E749B001422BA /* dropPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE529B206E749B001422BA /* dropPredicate.swift */; };
+		BFCE52A1206E74C6001422BA /* dropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE52A0206E74C6001422BA /* dropTests.swift */; };
 		BFF38809205069250059887B /* orTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF38808205069250059887B /* orTests.swift */; };
 		BFF3880E20506B630059887B /* andTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3880D20506B630059887B /* andTests.swift */; };
 		BFF3881020506BD90059887B /* filterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3880F20506BD90059887B /* filterTests.swift */; };
@@ -207,6 +216,9 @@
 		BFCE528A206E70C7001422BA /* containsPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = containsPredicate.swift; sourceTree = "<group>"; };
 		BFCE528F206E7128001422BA /* containsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = containsTests.swift; sourceTree = "<group>"; };
 		BFCE5291206E718B001422BA /* contains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contains.swift; sourceTree = "<group>"; };
+		BFCE5296206E745A001422BA /* drop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drop.swift; sourceTree = "<group>"; };
+		BFCE529B206E749B001422BA /* dropPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropPredicate.swift; sourceTree = "<group>"; };
+		BFCE52A0206E74C6001422BA /* dropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropTests.swift; sourceTree = "<group>"; };
 		BFF38808205069250059887B /* orTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orTests.swift; sourceTree = "<group>"; };
 		BFF3880D20506B630059887B /* andTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = andTests.swift; sourceTree = "<group>"; };
 		BFF3880F20506BD90059887B /* filterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterTests.swift; sourceTree = "<group>"; };
@@ -279,6 +291,7 @@
 				63786B4120595BEA00CD3CC5 /* between.swift */,
 				BFCE5291206E718B001422BA /* contains.swift */,
 				63786B3A20595BEA00CD3CC5 /* distinct.swift */,
+				BFCE5296206E745A001422BA /* drop.swift */,
 				63786B3E20595BEA00CD3CC5 /* filter.swift */,
 				63786B3720595BEA00CD3CC5 /* filterIn.swift */,
 				63786B3520595BEA00CD3CC5 /* filterLess.swift */,
@@ -302,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				BFCE528A206E70C7001422BA /* containsPredicate.swift */,
+				BFCE529B206E749B001422BA /* dropPredicate.swift */,
 				63786B4520595BEA00CD3CC5 /* filterPredicate.swift */,
 				BF26F85520669398007519D5 /* firstPredicate.swift */,
 				63786B4620595BEA00CD3CC5 /* KeyPathSingleTypePredicate+Operators.swift */,
@@ -363,6 +377,7 @@
 				BF7E2F012050786100FF096D /* betweenTests.swift */,
 				BFCE528F206E7128001422BA /* containsTests.swift */,
 				BFF3881120506D190059887B /* distinctTests.swift */,
+				BFCE52A0206E74C6001422BA /* dropTests.swift */,
 				BFF3880F20506BD90059887B /* filterTests.swift */,
 				BF840D242055975600AC6DA1 /* filterInTests.swift */,
 				BF840D1C2055932E00AC6DA1 /* filterLessTests.swift */,
@@ -623,6 +638,7 @@
 				BFCE528C206E70C7001422BA /* containsPredicate.swift in Sources */,
 				63786B8B20595DC400CD3CC5 /* KeyPathSingleTypePredicate.swift in Sources */,
 				63786B8020595DC000CD3CC5 /* filterLike.swift in Sources */,
+				BFCE529D206E749B001422BA /* dropPredicate.swift in Sources */,
 				63786B8420595DC000CD3CC5 /* min.swift in Sources */,
 				63786B8520595DC000CD3CC5 /* sorted.swift in Sources */,
 				63786B9D20595E2F00CD3CC5 /* DoubleTypePredicate.swift in Sources */,
@@ -630,6 +646,7 @@
 				63786B9E20595E2F00CD3CC5 /* joinPredicate.swift in Sources */,
 				63786B7820595DC000CD3CC5 /* groupBy.swift in Sources */,
 				63786B7E20595DC000CD3CC5 /* flatMap.swift in Sources */,
+				BFCE5298206E745A001422BA /* drop.swift in Sources */,
 				63786B7720595DC000CD3CC5 /* max.swift in Sources */,
 				63786B8320595DC000CD3CC5 /* filter.swift in Sources */,
 				63786B7920595DC000CD3CC5 /* join.swift in Sources */,
@@ -658,6 +675,7 @@
 				BFCE528D206E70C7001422BA /* containsPredicate.swift in Sources */,
 				63786BAB20595E4000CD3CC5 /* join.swift in Sources */,
 				63786BAE20595E4000CD3CC5 /* filterIn.swift in Sources */,
+				BFCE529E206E749B001422BA /* dropPredicate.swift in Sources */,
 				63786BB720595E4000CD3CC5 /* sorted.swift in Sources */,
 				63786BB920595E4000CD3CC5 /* map.swift in Sources */,
 				63786BAC20595E4000CD3CC5 /* filterLess.swift in Sources */,
@@ -665,6 +683,7 @@
 				63786BB620595E4000CD3CC5 /* min.swift in Sources */,
 				63786BB420595E4000CD3CC5 /* average.swift in Sources */,
 				63786BB020595E4000CD3CC5 /* flatMap.swift in Sources */,
+				BFCE5299206E745A001422BA /* drop.swift in Sources */,
 				63786BAD20595E4000CD3CC5 /* and.swift in Sources */,
 				63786BA220595E2F00CD3CC5 /* DoubleTypePredicate+Operators.swift in Sources */,
 				63786BB120595E4000CD3CC5 /* distinct.swift in Sources */,
@@ -693,6 +712,7 @@
 				BFCE528E206E70C7001422BA /* containsPredicate.swift in Sources */,
 				63786BE02059604000CD3CC5 /* KeyPathSingleTypePredicate.swift in Sources */,
 				63786BD52059603D00CD3CC5 /* filterLike.swift in Sources */,
+				BFCE529F206E749B001422BA /* dropPredicate.swift in Sources */,
 				63786BD92059603D00CD3CC5 /* min.swift in Sources */,
 				63786BDA2059603D00CD3CC5 /* sorted.swift in Sources */,
 				63786BE12059604400CD3CC5 /* DoubleTypePredicate.swift in Sources */,
@@ -700,6 +720,7 @@
 				63786BE22059604400CD3CC5 /* joinPredicate.swift in Sources */,
 				63786BCD2059603D00CD3CC5 /* groupBy.swift in Sources */,
 				63786BD32059603D00CD3CC5 /* flatMap.swift in Sources */,
+				BFCE529A206E745A001422BA /* drop.swift in Sources */,
 				63786BCC2059603D00CD3CC5 /* max.swift in Sources */,
 				63786BD82059603D00CD3CC5 /* filter.swift in Sources */,
 				63786BCE2059603D00CD3CC5 /* join.swift in Sources */,
@@ -728,6 +749,7 @@
 				BFCE528B206E70C7001422BA /* containsPredicate.swift in Sources */,
 				63786B6220595BEA00CD3CC5 /* KeyPathSingleTypePredicate.swift in Sources */,
 				63786B5720595BEA00CD3CC5 /* filterLike.swift in Sources */,
+				BFCE529C206E749B001422BA /* dropPredicate.swift in Sources */,
 				63786B5B20595BEA00CD3CC5 /* min.swift in Sources */,
 				63786B5C20595BEA00CD3CC5 /* sorted.swift in Sources */,
 				63786B6420595BEA00CD3CC5 /* DoubleTypePredicate.swift in Sources */,
@@ -735,6 +757,7 @@
 				63786B6520595BEA00CD3CC5 /* joinPredicate.swift in Sources */,
 				63786B4F20595BEA00CD3CC5 /* groupBy.swift in Sources */,
 				63786B5520595BEA00CD3CC5 /* flatMap.swift in Sources */,
+				BFCE5297206E745A001422BA /* drop.swift in Sources */,
 				63786B4E20595BEA00CD3CC5 /* max.swift in Sources */,
 				63786B5A20595BEA00CD3CC5 /* filter.swift in Sources */,
 				63786B5020595BEA00CD3CC5 /* join.swift in Sources */,
@@ -753,6 +776,7 @@
 				BFF38818205074050059887B /* maxTests.swift in Sources */,
 				BFF3881C2050756E0059887B /* averageTests.swift in Sources */,
 				BFF3881E205077080059887B /* mapTests.swift in Sources */,
+				BFCE52A1206E74C6001422BA /* dropTests.swift in Sources */,
 				BF7E2F0620507BC500FF096D /* sortedTests.swift in Sources */,
 				BFF3881420506D960059887B /* groupByTests.swift in Sources */,
 				BF840D252055975600AC6DA1 /* filterInTests.swift in Sources */,

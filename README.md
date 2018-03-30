@@ -72,6 +72,7 @@ let package = Package(
 * [between](#between)
 * [contains](#contains)
 * [distinct](#distinct)
+* [dropWhile](#dropwhile)
 * [filter](#filter)
 * [filterIn](#filterin)
 * [filterLess](#filterless)
@@ -177,6 +178,22 @@ contacts.distinct(\.lastName)
 
 ```
 ["Webb", "Elexson", "Zunino", "Alexson"]
+```
+
+### dropWhile
+
+Skips first elements while a boolean property or a predicate returns true.
+
+```swift
+contacts.drop(while: \.age < 40)
+```
+
+```
+[Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicense: true, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Zunino", age: 34, hasDriverLicense: true, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Alexson", age: 8, hasDriverLicense: false, isAmerican: true), 
+ Person(firstName: "John", lastName: "Webb", age: 28, hasDriverLicense: true, isAmerican: true), 
+ Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
 ```
 
 ### filter
