@@ -117,7 +117,6 @@
 		BF26F86320669433007519D5 /* first.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F85F20669433007519D5 /* first.swift */; };
 		BF26F8652066947B007519D5 /* firstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F8642066947B007519D5 /* firstTests.swift */; };
 		BF59B3A0205065F900D620E1 /* KeyPathKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF59B396205065F800D620E1 /* KeyPathKit.framework */; };
-		BF59B3A5205065F900D620E1 /* KeyPathKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59B3A4205065F900D620E1 /* KeyPathKitTests.swift */; };
 		BF7E2F022050786100FF096D /* betweenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E2F012050786100FF096D /* betweenTests.swift */; };
 		BF7E2F042050798E00FF096D /* joinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E2F032050798E00FF096D /* joinTests.swift */; };
 		BF7E2F0620507BC500FF096D /* sortedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E2F0520507BC500FF096D /* sortedTests.swift */; };
@@ -213,7 +212,6 @@
 		BF26F8642066947B007519D5 /* firstTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstTests.swift; sourceTree = "<group>"; };
 		BF59B396205065F800D620E1 /* KeyPathKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyPathKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF59B39F205065F900D620E1 /* KeyPathKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyPathKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF59B3A4205065F900D620E1 /* KeyPathKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathKitTests.swift; sourceTree = "<group>"; };
 		BF59B3A6205065F900D620E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF7E2F012050786100FF096D /* betweenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = betweenTests.swift; sourceTree = "<group>"; };
 		BF7E2F032050798E00FF096D /* joinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinTests.swift; sourceTree = "<group>"; };
@@ -376,7 +374,6 @@
 		BF59B3A3205065F900D620E1 /* KeyPathKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				BF59B3A4205065F900D620E1 /* KeyPathKitTests.swift */,
 				BF59B3A6205065F900D620E1 /* Info.plist */,
 				BFF38807205069040059887B /* TestOperators */,
 			);
@@ -810,7 +807,6 @@
 				BF7E2F022050786100FF096D /* betweenTests.swift in Sources */,
 				BF840D1D2055932E00AC6DA1 /* filterLessTests.swift in Sources */,
 				BFF38816205070280059887B /* sumTests.swift in Sources */,
-				BF59B3A5205065F900D620E1 /* KeyPathKitTests.swift in Sources */,
 				BF7E2F042050798E00FF096D /* joinTests.swift in Sources */,
 				BF840D212055946800AC6DA1 /* filterMoreTests.swift in Sources */,
 				BFF3881A205075200059887B /* minTests.swift in Sources */,
