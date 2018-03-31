@@ -70,7 +70,9 @@ let package = Package(
 * [and](#and)
 * [average](#average)
 * [between](#between)
+* [contains](#contains)
 * [distinct](#distinct)
+* [drop](#drop)
 * [filter](#filter)
 * [filterIn](#filterin)
 * [filterLess](#filterless)
@@ -83,6 +85,7 @@ let package = Package(
 * [max](#max)
 * [min](#min)
 * [or](#or)
+* [prefix](#prefix)
 * [sum](#sum)
 * [sort](#sort)
 
@@ -152,6 +155,20 @@ contacts.filter(where: 20...30 ~= \.age)
  Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
 ```
 
+### contains
+
+Returns whether the sequence contains one element for which the specified boolean property or predicate is true.
+
+```swift
+contacts.contains(where: \.hasDriverLicense)
+contacts.contains(where: \.lastName.count > 10)
+```
+
+```
+true
+false
+```
+
 ### distinct
 
 Returns all the distinct values for the property.
@@ -162,6 +179,22 @@ contacts.distinct(\.lastName)
 
 ```
 ["Webb", "Elexson", "Zunino", "Alexson"]
+```
+
+### drop
+
+Returns a subsequence by skipping elements while a property of type `Bool` or a predicate evaluates to true, and returning the remaining elements.
+
+```swift
+contacts.drop(while: \.age < 40)
+```
+
+```
+[Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicense: true, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Zunino", age: 34, hasDriverLicense: true, isAmerican: true), 
+ Person(firstName: "Alex", lastName: "Alexson", age: 8, hasDriverLicense: false, isAmerican: true), 
+ Person(firstName: "John", lastName: "Webb", age: 28, hasDriverLicense: true, isAmerican: true), 
+ Person(firstName: "Webb", lastName: "Elexson", age: 30, hasDriverLicense: true, isAmerican: true)]
 ```
 
 ### filter
@@ -375,6 +408,18 @@ contacts.or(\.hasDriverLicense)
 
 ```
 true
+```
+### prefix
+
+Returns a subsequence containing the initial, consecutive elements for whose a property of type `Bool` or a predicate evaluates to true.
+
+```swift
+contacts.prefix(while: \.age < 40)
+```
+
+```
+[Person(firstName: "Charlie", lastName: "Webb", age: 10, hasDriverLicense: false, isAmerican: true),
+ Person(firstName: "Alex", lastName: "Elexson", age: 22, hasDriverLicense: false, isAmerican: true)]
 ```
 
 ### sum
