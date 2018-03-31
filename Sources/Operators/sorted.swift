@@ -43,11 +43,7 @@ public struct Sort<Element> {
 extension Sequence {
     public func sorted<T: Comparable>(by attribute: KeyPath<Element, T>) -> [Element] {
         return sorted(by: { (elm1, elm2) -> Bool in
-            if elm1[keyPath: attribute] != elm2[keyPath: attribute] {
-                return elm1[keyPath: attribute] < elm2[keyPath: attribute]
-            }
-            
-            return false
+            return elm1[keyPath: attribute] < elm2[keyPath: attribute]
         })
     }
     
