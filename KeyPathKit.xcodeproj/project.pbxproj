@@ -116,7 +116,12 @@
 		BF26F86220669433007519D5 /* first.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F85F20669433007519D5 /* first.swift */; };
 		BF26F86320669433007519D5 /* first.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F85F20669433007519D5 /* first.swift */; };
 		BF26F8652066947B007519D5 /* firstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26F8642066947B007519D5 /* firstTests.swift */; };
+		BF378F4C2077E05100EBCAE5 /* mapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF378F4B2077E05100EBCAE5 /* mapTo.swift */; };
+		BF378F4D2077E05100EBCAE5 /* mapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF378F4B2077E05100EBCAE5 /* mapTo.swift */; };
+		BF378F4E2077E05100EBCAE5 /* mapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF378F4B2077E05100EBCAE5 /* mapTo.swift */; };
+		BF378F4F2077E05100EBCAE5 /* mapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF378F4B2077E05100EBCAE5 /* mapTo.swift */; };
 		BF59B3A0205065F900D620E1 /* KeyPathKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF59B396205065F800D620E1 /* KeyPathKit.framework */; };
+		BF6C000D2077E6EA002C0DC9 /* mapToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6C000C2077E6EA002C0DC9 /* mapToTests.swift */; };
 		BF7E2F022050786100FF096D /* betweenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E2F012050786100FF096D /* betweenTests.swift */; };
 		BF7E2F042050798E00FF096D /* joinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E2F032050798E00FF096D /* joinTests.swift */; };
 		BF7E2F0620507BC500FF096D /* sortedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E2F0520507BC500FF096D /* sortedTests.swift */; };
@@ -210,9 +215,11 @@
 		BF26F85520669398007519D5 /* firstPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstPredicate.swift; sourceTree = "<group>"; };
 		BF26F85F20669433007519D5 /* first.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = first.swift; sourceTree = "<group>"; };
 		BF26F8642066947B007519D5 /* firstTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstTests.swift; sourceTree = "<group>"; };
+		BF378F4B2077E05100EBCAE5 /* mapTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapTo.swift; sourceTree = "<group>"; };
 		BF59B396205065F800D620E1 /* KeyPathKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyPathKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF59B39F205065F900D620E1 /* KeyPathKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyPathKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF59B3A6205065F900D620E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF6C000C2077E6EA002C0DC9 /* mapToTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapToTests.swift; sourceTree = "<group>"; };
 		BF7E2F012050786100FF096D /* betweenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = betweenTests.swift; sourceTree = "<group>"; };
 		BF7E2F032050798E00FF096D /* joinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinTests.swift; sourceTree = "<group>"; };
 		BF7E2F0520507BC500FF096D /* sortedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sortedTests.swift; sourceTree = "<group>"; };
@@ -311,13 +318,14 @@
 				63786B3920595BEA00CD3CC5 /* flatMap.swift */,
 				63786B3320595BEA00CD3CC5 /* groupBy.swift */,
 				63786B3420595BEA00CD3CC5 /* join.swift */,
+				63786B4220595BEA00CD3CC5 /* map.swift */,
+				BF378F4B2077E05100EBCAE5 /* mapTo.swift */,
 				63786B3220595BEA00CD3CC5 /* max.swift */,
 				63786B3F20595BEA00CD3CC5 /* min.swift */,
 				63786B4320595BEA00CD3CC5 /* or.swift */,
 				BFF80D6D206FD68600A926E2 /* prefix.swift */,
 				63786B4020595BEA00CD3CC5 /* sorted.swift */,
 				63786B3C20595BEA00CD3CC5 /* sum.swift */,
-				63786B4220595BEA00CD3CC5 /* map.swift */,
 			);
 			path = Operators;
 			sourceTree = "<group>";
@@ -399,6 +407,7 @@
 				BFF3881320506D960059887B /* groupByTests.swift */,
 				BF7E2F032050798E00FF096D /* joinTests.swift */,
 				BFF3881D205077080059887B /* mapTests.swift */,
+				BF6C000C2077E6EA002C0DC9 /* mapToTests.swift */,
 				BFF38817205074050059887B /* maxTests.swift */,
 				BFF38819205075200059887B /* minTests.swift */,
 				BFF38808205069250059887B /* orTests.swift */,
@@ -655,6 +664,7 @@
 				63786B8420595DC000CD3CC5 /* min.swift in Sources */,
 				63786B8520595DC000CD3CC5 /* sorted.swift in Sources */,
 				63786B9D20595E2F00CD3CC5 /* DoubleTypePredicate.swift in Sources */,
+				BF378F4D2077E05100EBCAE5 /* mapTo.swift in Sources */,
 				63786B7B20595DC000CD3CC5 /* and.swift in Sources */,
 				63786B9E20595E2F00CD3CC5 /* joinPredicate.swift in Sources */,
 				63786B7820595DC000CD3CC5 /* groupBy.swift in Sources */,
@@ -694,6 +704,7 @@
 				63786BB720595E4000CD3CC5 /* sorted.swift in Sources */,
 				63786BB920595E4000CD3CC5 /* map.swift in Sources */,
 				63786BAC20595E4000CD3CC5 /* filterLess.swift in Sources */,
+				BF378F4E2077E05100EBCAE5 /* mapTo.swift in Sources */,
 				63786BB520595E4000CD3CC5 /* filter.swift in Sources */,
 				63786BB620595E4000CD3CC5 /* min.swift in Sources */,
 				63786BB420595E4000CD3CC5 /* average.swift in Sources */,
@@ -733,6 +744,7 @@
 				63786BD92059603D00CD3CC5 /* min.swift in Sources */,
 				63786BDA2059603D00CD3CC5 /* sorted.swift in Sources */,
 				63786BE12059604400CD3CC5 /* DoubleTypePredicate.swift in Sources */,
+				BF378F4F2077E05100EBCAE5 /* mapTo.swift in Sources */,
 				63786BD02059603D00CD3CC5 /* and.swift in Sources */,
 				63786BE22059604400CD3CC5 /* joinPredicate.swift in Sources */,
 				63786BCD2059603D00CD3CC5 /* groupBy.swift in Sources */,
@@ -772,6 +784,7 @@
 				63786B5B20595BEA00CD3CC5 /* min.swift in Sources */,
 				63786B5C20595BEA00CD3CC5 /* sorted.swift in Sources */,
 				63786B6420595BEA00CD3CC5 /* DoubleTypePredicate.swift in Sources */,
+				BF378F4C2077E05100EBCAE5 /* mapTo.swift in Sources */,
 				63786B5220595BEA00CD3CC5 /* and.swift in Sources */,
 				63786B6520595BEA00CD3CC5 /* joinPredicate.swift in Sources */,
 				63786B4F20595BEA00CD3CC5 /* groupBy.swift in Sources */,
@@ -798,6 +811,7 @@
 				BFF3881C2050756E0059887B /* averageTests.swift in Sources */,
 				BFF3881E205077080059887B /* mapTests.swift in Sources */,
 				BFCE52A1206E74C6001422BA /* dropTests.swift in Sources */,
+				BF6C000D2077E6EA002C0DC9 /* mapToTests.swift in Sources */,
 				BF7E2F0620507BC500FF096D /* sortedTests.swift in Sources */,
 				BFF3881420506D960059887B /* groupByTests.swift in Sources */,
 				BF840D252055975600AC6DA1 /* filterInTests.swift in Sources */,

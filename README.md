@@ -82,6 +82,7 @@ let package = Package(
 * [groupBy](#groupby)
 * [join](#join)
 * [map](#map)
+* [mapTo](#mapto)
 * [max](#max)
 * [min](#min)
 * [or](#or)
@@ -372,6 +373,29 @@ contacts.map(\.lastName)
 
 ```
 ["Webb", "Elexson", "Webb", "Zunino", "Alexson", "Webb", "Elexson"]
+```
+
+### mapTo
+
+Maps a sequence of properties to a function. This is, for instance, useful to extract a subset of properties in a structured type.
+
+```swift
+struct ContactCellModel {
+    let firstName: String
+    let lastName: String
+}
+
+contacts.map(\.lastName, \.firstName, to: ContactCellModel.init)
+```
+
+```
+[ContactCellModel(firstName: "Webb", lastName: "Charlie"), 
+ ContactCellModel(firstName: "Elexson", lastName: "Alex"), 
+ ContactCellModel(firstName: "Webb", lastName: "Charles"), 
+ ContactCellModel(firstName: "Zunino", lastName: "Alex"), 
+ ContactCellModel(firstName: "Alexson", lastName: "Alex"), 
+ ContactCellModel(firstName: "Webb", lastName: "John"), 
+ ContactCellModel(firstName: "Elexson", lastName: "Webb")]
 ```
 
 ### max
