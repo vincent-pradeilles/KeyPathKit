@@ -377,7 +377,7 @@ contacts.map(\.lastName)
 
 ### mapTo
 
-Maps a sequence of properties to a function. This is, for instance, useful to extract a subset of properties in a structured type.
+Maps a sequence of properties to a function. This is, for instance, useful to extract a subset of properties into a structured type.
 
 ```swift
 struct ContactCellModel {
