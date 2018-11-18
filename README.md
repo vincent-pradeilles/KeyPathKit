@@ -133,7 +133,7 @@ true
 Calculates the average of a numerical property.
 
 ```swift
-contacts.average(by: \.age).rounded()
+contacts.average(of: \.age).rounded()
 ```
 
 ```
@@ -451,7 +451,7 @@ contacts.prefix(while: \.age < 40)
 Calculates the sum of the values for a numerical property.
 
 ```swift
-contacts.sum(by: \.age)
+contacts.sum(of: \.age)
 ```
 
 ```

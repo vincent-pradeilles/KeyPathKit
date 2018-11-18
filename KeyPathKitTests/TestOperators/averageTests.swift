@@ -24,9 +24,9 @@ class AverageTests: XCTestCase {
     func test_average_empty() {
         let data: [TestData] = []
                 
-        XCTAssert(data.average(by: \.int).isNaN)
-        XCTAssert(data.average(by: \.float).isNaN)
-        XCTAssert(data.average(by: \.double).isNaN)
+        XCTAssert(data.average(of: \.int).isNaN)
+        XCTAssert(data.average(of: \.float).isNaN)
+        XCTAssert(data.average(of: \.double).isNaN)
     }
     
     func test_average_values() {
@@ -37,8 +37,8 @@ class AverageTests: XCTestCase {
                                 TestData(int: 2, float: 9.4, double: -2.43),
                                 TestData(int: 7, float: 9.4, double: 5.0),]
         
-        XCTAssert(areEqual(data.average(by: \.int), 14.166))
-        XCTAssert(areEqual(data.average(by: \.float), 9.4))
-        XCTAssert(areEqual(data.average(by: \.double), 12.845))
+        XCTAssert(areEqual(data.average(of: \.int), 14.166))
+        XCTAssert(areEqual(data.average(of: \.float), 9.4))
+        XCTAssert(areEqual(data.average(of: \.double), 12.845))
     }
 }
