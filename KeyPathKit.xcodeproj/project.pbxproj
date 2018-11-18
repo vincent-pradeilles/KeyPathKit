@@ -212,6 +212,7 @@
 		63786BA520595E3700CD3CC5 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "Sources/Info-tvOS.plist"; sourceTree = "<group>"; };
 		63786BC020595FDE00CD3CC5 /* KeyPathKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyPathKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63786BC92059602B00CD3CC5 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-watchOS.plist"; path = "Sources/Info-watchOS.plist"; sourceTree = "<group>"; };
+		8792CF7B21A15A8A00A20241 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BF26F85520669398007519D5 /* firstPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstPredicate.swift; sourceTree = "<group>"; };
 		BF26F85F20669433007519D5 /* first.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = first.swift; sourceTree = "<group>"; };
 		BF26F8642066947B007519D5 /* firstTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstTests.swift; sourceTree = "<group>"; };
@@ -294,8 +295,8 @@
 			children = (
 				63786B3120595BEA00CD3CC5 /* Operators */,
 				63786B4420595BEA00CD3CC5 /* SingleTypePredicate */,
-				63786B4820595BEA00CD3CC5 /* KeyPathKit.h */,
 				63786B4920595BEA00CD3CC5 /* DoubleTypePredicate */,
+				63786B4820595BEA00CD3CC5 /* KeyPathKit.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -357,6 +358,7 @@
 		BF59B38C205065F800D620E1 = {
 			isa = PBXGroup;
 			children = (
+				8792CF7B21A15A8A00A20241 /* README.md */,
 				63786BA320595E3600CD3CC5 /* Info-iOS.plist */,
 				63786BA420595E3700CD3CC5 /* Info-macOS.plist */,
 				63786BA520595E3700CD3CC5 /* Info-tvOS.plist */,

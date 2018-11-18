@@ -19,8 +19,8 @@ class SumTests: XCTestCase {
     func test_sum_empty() {
         let data: [TestData] = []
         
-        XCTAssertEqual(data.sum(of: \.int), 0)
-        XCTAssertEqual(data.sum(of: \.double), 0.0)
+        XCTAssertEqual(data.sum(by: \.int), 0)
+        XCTAssertEqual(data.sum(by: \.double), 0.0)
     }
     
     func test_sum_values() {
@@ -31,7 +31,7 @@ class SumTests: XCTestCase {
                                 TestData(int: 2, double: -2.43),
                                 TestData(int: 7, double: 5.0),]
         
-        XCTAssertEqual(data.sum(of: \.int), 85)
-        XCTAssertEqual(data.sum(of: \.double), 77.07)
+        XCTAssertEqual(data.sum(by: \.int), 85)
+        XCTAssertEqual(data.sum(by: \.double), 77.07)
     }
 }
