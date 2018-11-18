@@ -10,6 +10,7 @@ import Foundation
 
 extension Sequence {
     public func filter(where attribute: KeyPath<Element, String>, like regex: String) -> [Element] {
-        return filter { return NSPredicate(format:"SELF MATCHES %@", regex).evaluate(with: $0[keyPath: attribute]) }
+        let predicate = NSPredicate(format:"SELF MATCHES %@", regex)
+        return filter { predicate.evaluate(with: $0[keyPath: attribute]) }
     }
 }
