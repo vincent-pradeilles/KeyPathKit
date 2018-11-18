@@ -13,13 +13,8 @@ extension Sequence {
         var result: [T: [Element]] = [:]
         
         for value in self {
-            let attribute = value[keyPath: groupAttribute]
-            
-            if result.keys.contains(attribute) {
-                result[attribute]?.append(value)
-            } else {
-                result[attribute] = [value]
-            }
+            let key = value[keyPath: groupAttribute]
+            result[key, default: []].append(value)
         }
         
         return result

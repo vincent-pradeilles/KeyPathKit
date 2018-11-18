@@ -10,6 +10,11 @@ import Foundation
 
 extension Sequence {
     public func and(_ attribute: KeyPath<Element, Bool>) -> Bool {
-        return reduce(true) { $0 && $1[keyPath: attribute] }
+        for element in self{
+            if element[keyPath: attribute] == false {
+                return false
+            }
+        }
+        return true
     }
 }

@@ -9,9 +9,7 @@
 import Foundation
 
 extension Collection {
-    public func max<T: Comparable>(of attribute: KeyPath<Element, T>) -> Element? {
-        guard let initValue = first else { return nil }
-        
-        return reduce(initValue) { $0[keyPath: attribute] > $1[keyPath: attribute] ? $0 : $1 }
+    public func max<T: Comparable>(by attribute: KeyPath<Element, T>) -> Element? {
+        return self.max(by: { $0[keyPath: attribute] < $1[keyPath: attribute] })
     }
 }

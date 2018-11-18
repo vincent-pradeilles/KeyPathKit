@@ -403,7 +403,7 @@ contacts.map(\.lastName, \.firstName, to: ContactCellModel.init)
 Returns the element with the greatest value for a `Comparable` property.
 
 ```swift
-contacts.max(of: \.age)
+contacts.max(by: \.age)
 ```
 
 ```
@@ -415,7 +415,7 @@ Optional(Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicens
 Returns the element with the minimum value for a `Comparable` property.
 
 ```swift
-contacts.min(of: \.age)
+contacts.min(by: \.age)
 ```
 
 ```

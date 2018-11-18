@@ -26,8 +26,8 @@ class MaxTests: XCTestCase {
     func test_max_empty() {
         let data: [TestData] = []
         
-        XCTAssertNil(data.max(of: \.int))
-        XCTAssertNil(data.max(of: \.double))
+        XCTAssertNil(data.max(by: \.int))
+        XCTAssertNil(data.max(by: \.double))
     }
     
     func test_max_values() {
@@ -38,7 +38,7 @@ class MaxTests: XCTestCase {
                                 TestData(int: 2, double: -2.43),
                                 TestData(int: 7, double: 5.0),]
         
-        XCTAssertEqual(data.max(of: \.int), TestData(int: 70, double: 8.0))
-        XCTAssertEqual(data.max(of: \.double), TestData(int: -3, double: 65.0))
+        XCTAssertEqual(data.max(by: \.int), TestData(int: 70, double: 8.0))
+        XCTAssertEqual(data.max(by: \.double), TestData(int: -3, double: 65.0))
     }
 }

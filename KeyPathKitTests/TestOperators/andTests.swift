@@ -38,4 +38,14 @@ class AndTests: XCTestCase {
         
         XCTAssertFalse(data.and(\.bool))
     }
+
+    func test_infinite_sequence() {
+        var i = 0
+        let data = AnyIterator { () -> TestData in
+            defer { i += 1 }
+            return TestData(bool: i % 3 != 0)
+        }
+        XCTAssertTrue(data.or(\.bool))
+    }
+    
 }

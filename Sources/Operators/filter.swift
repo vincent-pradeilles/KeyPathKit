@@ -10,6 +10,13 @@ import Foundation
 
 extension Sequence {
     public func filter(where attributes: KeyPath<Element, Bool>...) -> [Element] {
-        return filter { element in attributes.reduce(true) { previous, attribute in previous && element[keyPath: attribute] }  }
+        return filter { element in
+            for attribute in attributes {
+                if element[keyPath: attribute] == false {
+                    return false
+                }
+            }
+            return true
+        }
     }
 }

@@ -11,13 +11,24 @@ import Foundation
 extension Sequence {
     public func distinct<T: Equatable>(_ attribute: KeyPath<Element, T>) -> [T] {
         var result: [T] = []
-        
-        for value in self {
-            if !result.contains(value[keyPath: attribute]) {
-                result.append(value[keyPath: attribute])
-            }
+
+        for value in self where !result.contains(value[keyPath: attribute]){
+            result.append(value[keyPath: attribute])
         }
         
+        return result
+    }
+
+    public func distinct<T: Hashable>(_ attribute: KeyPath<Element, T>) -> [T] {
+        var result: [T] = []
+        var resultSet: Set<T> = []
+
+        for value in self where !resultSet.contains(value[keyPath: attribute]){
+            let element = value[keyPath: attribute]
+            result.append(element)
+            resultSet.insert(element)
+        }
+
         return result
     }
 }
