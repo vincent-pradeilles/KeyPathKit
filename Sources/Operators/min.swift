@@ -9,9 +9,7 @@
 import Foundation
 
 extension Collection {
-        guard let initValue = first else { return nil }
-        
-        return reduce(initValue) { $0[keyPath: attribute] < $1[keyPath: attribute] ? $0 : $1 }
     public func min<T: Comparable>(by attribute: KeyPath<Element, T>) -> Element? {
+        return self.min(by: { $0[keyPath: attribute] < $1[keyPath: attribute] })
     }
 }
