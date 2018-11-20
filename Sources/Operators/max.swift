@@ -12,4 +12,8 @@ extension Collection {
     public func max<T: Comparable>(by attribute: KeyPath<Element, T>) -> Element? {
         return self.max(by: { $0[keyPath: attribute] < $1[keyPath: attribute] })
     }
+
+    public func max<T: Comparable>(_ attribute: KeyPath<Element, T>) -> T? {
+        return self.max(by: attribute)?[keyPath: attribute]
+    }
 }
