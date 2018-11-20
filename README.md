@@ -404,10 +404,12 @@ Returns the element with the greatest value for a `Comparable` property.
 
 ```swift
 contacts.max(by: \.age)
+contacts.max(\.age)
 ```
 
 ```
 Optional(Person(firstName: "Charles", lastName: "Webb", age: 45, hasDriverLicense: true, isAmerican: true))
+Optional(45)
 ```
 
 ### min
@@ -416,10 +418,12 @@ Returns the element with the minimum value for a `Comparable` property.
 
 ```swift
 contacts.min(by: \.age)
+contacts.min(\.age)
 ```
 
 ```
 Optional(Person(firstName: "Alex", lastName: "Alexson", age: 8, hasDriverLicense: false, isAmerican: true))
+Optional(8)
 ```
 
 ### or

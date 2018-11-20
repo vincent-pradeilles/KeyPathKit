@@ -12,4 +12,8 @@ extension Collection {
     public func min<T: Comparable>(by attribute: KeyPath<Element, T>) -> Element? {
         return self.min(by: { $0[keyPath: attribute] < $1[keyPath: attribute] })
     }
+
+    public func min<T: Comparable>(_ attribute: KeyPath<Element, T>) -> T? {
+        return self.min(by: attribute)?[keyPath: attribute]
+    }
 }
