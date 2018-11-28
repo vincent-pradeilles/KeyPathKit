@@ -9,11 +9,11 @@
 import Foundation
 
 extension Sequence {
-    public func filter<T>(where attribute: KeyPath<Element, T>, in values: Set<T>) -> [Element] {
+    public func filter<S: Sequence, T: Hashable>(where attribute: KeyPath<Element, T>, in values: S) -> [Element] where S.Element == T {
         return filter { values.contains($0[keyPath: attribute]) }
     }
 
-    public func filter<T>(where values: Set<T>, contains attribute: KeyPath<Element, T>) -> [Element] {
+    public func filter<S: Sequence, T: Hashable>(where values: S, contains attribute: KeyPath<Element, T>) -> [Element] where S.Element == T {
         return filter { values.contains($0[keyPath: attribute]) }
     }
 }
