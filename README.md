@@ -227,7 +227,7 @@ contacts.filter(where: \.firstName == "Webb")
 
 ### filterIn
 
-Filters out elements whose value for an `Equatable` property is not in a given `Set`.
+Filters out elements whose value for an `Equatable` property is not in a given `Sequence`.
 
 ```swift
 contacts.filter(where: \.firstName, in: ["Alex", "John"])
