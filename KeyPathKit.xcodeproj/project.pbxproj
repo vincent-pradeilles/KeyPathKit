@@ -120,6 +120,7 @@
 		BF378F4D2077E05100EBCAE5 /* mapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF378F4B2077E05100EBCAE5 /* mapTo.swift */; };
 		BF378F4E2077E05100EBCAE5 /* mapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF378F4B2077E05100EBCAE5 /* mapTo.swift */; };
 		BF378F4F2077E05100EBCAE5 /* mapTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF378F4B2077E05100EBCAE5 /* mapTo.swift */; };
+		BF3ABB0D21E25A13004263BD /* patternMatchingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3ABB0C21E25A13004263BD /* patternMatchingTests.swift */; };
 		BF59B3A0205065F900D620E1 /* KeyPathKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF59B396205065F800D620E1 /* KeyPathKit.framework */; };
 		BF6C000D2077E6EA002C0DC9 /* mapToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6C000C2077E6EA002C0DC9 /* mapToTests.swift */; };
 		BF7E2F022050786100FF096D /* betweenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E2F012050786100FF096D /* betweenTests.swift */; };
@@ -217,6 +218,7 @@
 		BF26F85F20669433007519D5 /* first.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = first.swift; sourceTree = "<group>"; };
 		BF26F8642066947B007519D5 /* firstTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstTests.swift; sourceTree = "<group>"; };
 		BF378F4B2077E05100EBCAE5 /* mapTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapTo.swift; sourceTree = "<group>"; };
+		BF3ABB0C21E25A13004263BD /* patternMatchingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patternMatchingTests.swift; sourceTree = "<group>"; };
 		BF59B396205065F800D620E1 /* KeyPathKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyPathKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF59B39F205065F900D620E1 /* KeyPathKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyPathKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF59B3A6205065F900D620E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 				BFF38817205074050059887B /* maxTests.swift */,
 				BFF38819205075200059887B /* minTests.swift */,
 				BFF38808205069250059887B /* orTests.swift */,
+				BF3ABB0C21E25A13004263BD /* patternMatchingTests.swift */,
 				BFF80D77206FD6ED00A926E2 /* prefixTests.swift */,
 				BFF38815205070280059887B /* sumTests.swift */,
 				BF7E2F0520507BC500FF096D /* sortedTests.swift */,
@@ -808,6 +811,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF38809205069250059887B /* orTests.swift in Sources */,
+				BF3ABB0D21E25A13004263BD /* patternMatchingTests.swift in Sources */,
 				BFF38820205077A30059887B /* flatMapTests.swift in Sources */,
 				BFF3881220506D190059887B /* distinctTests.swift in Sources */,
 				BFF38818205074050059887B /* maxTests.swift in Sources */,
