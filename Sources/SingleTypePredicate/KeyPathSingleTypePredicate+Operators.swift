@@ -56,6 +56,10 @@ public func ~= <Element, T> (_ pattern: ClosedRange<T>, _ leftAttribute: KeyPath
     return KeyPathSingleTypePredicate(evaluator: { _, rhs in pattern ~= rhs[keyPath: leftAttribute] })
 }
 
+public func ~= <Element>(_ lhs: KeyPathSingleTypePredicate<Element>, rhs: Element) -> Bool {
+    return lhs.evaluate(for: rhs)
+}
+
 public func <= <Element, T: Comparable>(_ leftAttribute: KeyPath<Element, T>, _ rightAttribute: KeyPath<Element, T>) -> KeyPathSingleTypePredicate<Element> {
     return KeyPathSingleTypePredicate(evaluator: { lhs, rhs in lhs[keyPath: leftAttribute] <= rhs[keyPath: rightAttribute] })
 }

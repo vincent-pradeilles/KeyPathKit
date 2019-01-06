@@ -86,6 +86,7 @@ let package = Package(
 * [max](#max)
 * [min](#min)
 * [or](#or)
+* [patternMatching](#patternMatching)
 * [prefix](#prefix)
 * [sum](#sum)
 * [sort](#sort)
@@ -437,6 +438,24 @@ contacts.or(\.hasDriverLicense)
 ```
 true
 ```
+
+### patternMatching
+
+Allows the use of predicates inside a `switch` statement:
+
+```swift
+switch person {
+case \.firstName == "Charlie":
+    print("I'm Charlie!")
+    fallthrough
+case \.age < 18:
+    print("I'm not an adult...")
+    fallthrough
+default:
+    break
+}
+```
+
 ### prefix
 
 Returns a subsequence containing the initial, consecutive elements for whose a property of type `Bool` or a predicate evaluates to true.
