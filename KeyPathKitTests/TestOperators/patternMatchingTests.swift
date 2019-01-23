@@ -22,8 +22,13 @@ class PatternMatchingTests: XCTestCase {
         switch data {
         case \.string == "second":
             XCTAssertEqual(data.string, "second")
+            fallthrough
+        case \.string == \.string:
+            XCTAssertEqual(data.string, data.string)
+            fallthrough
         case \.bool == true:
             XCTAssertTrue(data.bool)
+            fallthrough
         default:
             break
         }
