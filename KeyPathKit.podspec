@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'KeyPathKit'
-  s.version          = '1.5.0'
+  s.version          = '1.5.1'
   s.summary          = 'KeyPathKit leverages Swift 4 KeyPath type in order to implement a SQL-like data manipulation API'
 
   s.description      = <<-DESC
