@@ -9,7 +9,7 @@
 import Foundation
 
 extension Sequence {
-    public func drop(while attribute: KeyPath<Element, Bool>) -> Self.SubSequence {
+    public func drop(while attribute: KeyPath<Element, Bool>) -> DropWhileSequence<Self> {
         return drop(while: { $0[keyPath: attribute] })
     }
 }
