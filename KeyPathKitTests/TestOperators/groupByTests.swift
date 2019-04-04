@@ -39,10 +39,19 @@ class GroupByTests: XCTestCase {
                     TestData(string: "three", int: 78, bool: false),
                     TestData(string: "one", int: -6, bool: true)]
         
-        let expected = ["one": [TestData(string: "one", int: 2, bool: true), TestData(string: "one", int: 32, bool: true), TestData(string: "one", int: -6, bool: true)],
-                        "two": [TestData(string: "two", int: 45, bool: false), TestData(string: "two", int: 19, bool: false)],
+        let expected = ["one": [TestData(string: "one", int: 2, bool: true),
+                                TestData(string: "one", int: 32, bool: true),
+                                TestData(string: "one", int: -6, bool: true)],
+                        
+                        "two": [TestData(string: "two", int: 45, bool: false),
+                                TestData(string: "two", int: 19, bool: false)],
+                        
                         "three": [TestData(string: "three", int: 78, bool: false)]]
         
-        XCTAssert(data.groupBy(\.string) == expected)
+        // In dictionnary sorting doesn't matters.
+        expected.forEach { (key, value) in
+            
+            XCTAssert(expected[key] == value)
+        }
     }
 }

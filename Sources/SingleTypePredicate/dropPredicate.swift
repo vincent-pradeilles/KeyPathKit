@@ -9,7 +9,7 @@
 import Foundation
 
 extension Sequence {
-    public func drop(while predicate: KeyPathSingleTypePredicate<Element>) -> Self.SubSequence {
-        return drop(while: { predicate.evaluate(for: $0) })
+    public func drop(while predicate: KeyPathSingleTypePredicate<Element>) ->  DropWhileSequence<Self> {
+        return drop(while: { predicate.evaluate(for: $0) }) 
     }
 }
