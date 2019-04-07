@@ -48,8 +48,8 @@ class GroupByTests: XCTestCase {
                         
                         "three": [TestData(string: "three", int: 78, bool: false)]]
         
-        // In dictionnary sorting doesn't matters.
-        expected.forEach { (key, value) in
+        // In dictionnary sorting doesn't matter.
+        data.groupBy(\.string).forEach { (key, value) in
             
             XCTAssert(expected[key] == value)
         }
