@@ -501,7 +501,7 @@ contacts.sorted(by: \.age)
 It's also possible to specify the sorting order, to sort on multiple criteria, or to do both.
 
 ```swift
-contacts.sorted(by: .ascending(\. lastName), .descending(\.age))
+contacts.sorted(by: .ascending(\.lastName), .descending(\.age))
 ```
 
 ```

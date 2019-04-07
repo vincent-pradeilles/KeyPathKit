@@ -25,10 +25,10 @@ class DropTests: XCTestCase {
     
     func test_drop_empty() {
         let data: [TestData] = []
-        
-        XCTAssertEqual(data.drop(while: \.bool), [])
-        XCTAssertEqual(data.drop(while: \.bool == true), [])
-        XCTAssertEqual(data.drop(while: \.string == "first"), [])
+    
+        XCTAssertEqual(Array(data.drop(while: \.bool)) , [])
+        XCTAssertEqual(Array(data.drop(while: \.bool == true)), [])
+        XCTAssertEqual(Array(data.drop(while: \.string == "first")), [])
     }
     
     func test_drop_allValues() {
