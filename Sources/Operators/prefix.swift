@@ -9,7 +9,7 @@
 import Foundation
 
 extension Sequence {
-    public func prefix(while attribute: KeyPath<Element, Bool>) -> Self.SubSequence {
+    public func prefix(while attribute: KeyPath<Element, Bool>) -> [Self.Element] {
         return prefix(while: { $0[keyPath: attribute] })
     }
 }
