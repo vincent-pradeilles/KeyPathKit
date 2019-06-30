@@ -26,6 +26,8 @@ contacts.filter(where: \.lastName == "Webb" && \.age < 40)
   s.author           = { 'Vincent Pradeilles' => 'vin.pradeilles+keypathkit@gmail.com' }
   s.source           = { :git => 'https://github.com/vincent-pradeilles/KeyPathKit.git', :tag => s.version.to_s }
 
+  s.swift_versions = '4.2'
+  
   s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '10.0'
   s.osx.deployment_target = '10.12'
