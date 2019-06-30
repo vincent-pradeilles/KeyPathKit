@@ -45,7 +45,7 @@ class AndTests: XCTestCase {
             defer { i += 1 }
             return TestData(bool: i % 3 != 0)
         }
-        XCTAssertTrue(data.or(\.bool))
+        XCTAssertFalse(data.and(\.bool))
     }
     
 }
