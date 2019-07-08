@@ -514,6 +514,10 @@ contacts.sorted(by: .ascending(\.lastName), .descending(\.age))
  Person(firstName: "Alex", lastName: "Zunino", age: 34, hasDriverLicense: true, isAmerican: true)]
 ```
 
+## Author
+
+* Twitter: [@v_pradeilles](https://twitter.com/v_pradeilles)
+
 ## Thanks
 
 A big thank you to Jérôme Alves ([elegantswift.com](http://elegantswift.com)) for coming up with the right modelization to allow sorting on multiple properties with heterogenous type.
